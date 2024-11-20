@@ -8,6 +8,10 @@ import Layout from './Layout.js';
 import Home from './component/Home.js'
 import About from './component/about.js'
 import Contact from './component/Contact.js';
+import MyOrder from './component/MyOrder/MyOrder.js'
+import ShoppingCart from './component/ShoppingCart/ShoppingCart.js'
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +20,8 @@ const router = createBrowserRouter([
       {path: "/", element: <Home/>},
       {path: "about", element: <About/>},
       {path: "contact", element: <Contact/>},
+      {path:"shopping-cart" , element:<ShoppingCart/>},
+      {path:"my-order" , element:<MyOrder/>}
     ]
   }
 ])
