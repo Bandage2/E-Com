@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './Layout.js';
-import Home from './component/Home.js'
+import Home from './component/Home.js';
 import About from './component/about.js'
 import Contact from './component/Contact.js';
+import Product from './component/product/Product.js';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       {path: "/", element: <Home/>},
       {path: "about", element: <About/>},
       {path: "contact", element: <Contact/>},
+{path:"product" , element:<Product/>}
     ]
   }
 ])

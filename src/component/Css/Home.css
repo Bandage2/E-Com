@@ -872,7 +872,7 @@ footer {
     list-style-type: none;
     cursor: pointer;
 }
-.card-body ul li:nth-child(1) {
+/* .card-body ul li:nth-child(1) {
     background-color: #00b5d1;
 }
 .card-body ul li:nth-child(2) {
@@ -886,7 +886,7 @@ footer {
 }
 .card-body ul li:nth-child(5) {
     background-color: #f10bcf;
-}
+} */
 .card-body {
     height: 182px;
     position: relative
