@@ -8,14 +8,21 @@ import Layout from './Layout.js';
 import Home from './component/Home.js'
 import About from './component/about.js'
 import Contact from './component/Contact.js';
+import MyAccount from './component/MyAccount/MyAccount.js';
+
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-      {path: "/", element: <Home/>},
-      {path: "about", element: <About/>},
-      {path: "contact", element: <Contact/>},
+      { path: "/", element: <Home /> },
+      { path: "about", element: <About /> },
+      { path: "contact", element: <Contact /> },
+      { path: "my-account", element: <MyAccount /> },
+
     ]
   }
 ])
