@@ -1,0 +1,156 @@
+.main{
+  overflow-x: hidden;
+  }.pro {
+    height: 0vh;
+  }
+  .main-box  {
+    height: 6vh;
+    width: 4vw;
+    border-style: solid;
+    list-style: none;
+    background: white !important;
+    align-items: center;
+  }
+  .bar{
+  list-style: none;
+  flex-wrap: wrap;
+  }
+  .heart {
+    margin-left: 10vw;
+  }
+  .btn {
+    border: none;
+    background-color: #f2f0ea;
+  }
+  .bttn {
+    background-color: #f2f0ea;
+
+    border:none;
+    border-radius: 6px;
+
+  }
+
+
+  .car{
+  height: 16vh;
+  width: 18vh;
+  flex: wrap;
+  }
+  .card{
+    border: none;
+  }
+  /* .imgg{
+  background-color: rgb(245, 245, 220);
+  }
+  .bigimg {
+    background-color: rgb(245, 245, 220);
+  } */
+  .new{
+  border:solid;
+  border-color: rgb(183, 183, 183);
+  border-radius: 4px;
+  width: fit-content;
+  height: 6vh;
+  }
+  .graph{
+  border:solid;
+  border-color: rgb(183, 183, 183);
+  border-radius: 4px;
+
+  height: 6vh;
+  }
+
+  /* .small-img{
+    margin-left: 20vw;
+
+  } */
+
+
+
+
+
+  @media(min-width:768px){
+    .big-img{
+      height:70vh;
+
+
+      }
+
+  /* .m-left{
+    margin-left: 20vw;
+  } */
+
+  /* .row-img{
+    width:20vw;
+  } */
+
+      .imgg{
+        height: 20vh;
+        width: 9.6vw;
+
+
+      }
+
+  }
+
+  @media(max-width:768px){
+
+ .big-img{
+      height: 50vh;
+
+      }
+
+      .flex{
+        flex: 1 1 auto;
+        }
+
+        .imgg{
+          width: 30vw;
+
+        }
+
+  }
+
+
+
+
+  .side {
+    float: left;
+    width: 15%;
+    margin-top:10px;
+  }
+
+  .middle {
+    margin-top:10px;
+    float: left;
+    width: 70%;
+  }
+
+  /* Place text to the right */
+  .right {
+    text-align: right;
+  }
+
+  /* Clear floats after the columns */
+  /* .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+
+  /* The bar container */
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+  }
+
+  /* Individual bars */
+  .bar-5 {width: 60%; height: 18px; background-color:  #F9CD3C;}
+  .bar-4 {width: 30%; height: 18px; background-color:  #F9CD3C;}
+  .bar-3 {width: 10%; height: 18px; background-color: #F9CD3C;}
+  .bar-2 {width: 4%; height: 18px; background-color: #F9CD3C;}
+  .bar-1 {width: 15%; height: 18px; background-color:#F9CD3C;}
+
+
