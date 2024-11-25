@@ -16,6 +16,11 @@ import ShoppingCart from './component/ShoppingCart/ShoppingCart.js';
 import Accessories from './component/Accessories/Accessories.js';
 import Login from "./component/Login.js";
 import Myorder from './component/MyOrder/MyOrder.js'
+import MyAccount from './component/MyAccount/MyAccount.js';
+
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +32,8 @@ const router = createBrowserRouter([
       {path: "accessories", element: <Accessories/>},
       {path: "shoppingcart", element: <ShoppingCart/>},
       {path: "myorder", element: <Myorder/>},
+      { path: "my-account", element: <MyAccount /> },
+
     ]
   },
   { path: "login", element: <Login /> }
