@@ -12,7 +12,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import About from './component/about.js'
 import Contact from './component/Contact.js';
+import ShoppingCart from './component/ShoppingCart/ShoppingCart.js';
 import Accessories from './component/Accessories/Accessories.js';
+import Login from "./component/Login.js";
+import Myorder from './component/MyOrder/MyOrder.js'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,9 +25,12 @@ const router = createBrowserRouter([
       {path: "about", element: <About/>},
       {path: "contact", element: <Contact/>},
       {path: "accessories", element: <Accessories/>},
+      {path: "shoppingcart", element: <ShoppingCart/>},
+      {path: "myorder", element: <Myorder/>},
     ]
-  }
-])
+  },
+  { path: "login", element: <Login /> }
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

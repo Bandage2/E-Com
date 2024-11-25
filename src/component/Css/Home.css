@@ -1,6 +1,6 @@
 /* //........ Home ........// */
 body{
-    font-family: "Helvetica Neue", Helvetica !important;
+    font-family: "Poppins", Poppins !important;
 }
 .home_page img {
     height: auto;
@@ -581,7 +581,7 @@ a{
     text-decoration: none;
     padding: 9px 16px;
     border-radius: 17px;
-    font-size: 12px;
+    font-size: 9px;
 }
 .fx-product .reviews{
     font-size: 12px;
