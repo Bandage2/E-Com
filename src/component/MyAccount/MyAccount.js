@@ -34,9 +34,6 @@ function MyAccount() {
 
 
 
-
-
-
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id='account' role="tabpanel" aria-labelledby="home-tab">
                     <div class="container mx-auto col-lg-6 ">
@@ -87,7 +84,7 @@ function MyAccount() {
                     </div>
                 </div>
                 <div class="tab-pane fade" id='savelist' role="tabpanel" aria-labelledby="profile-tab">
-                    {/* --------------------------save lists------------------------- */}
+                    {/* ----------------------------------------save lists----------------------------------- */}
 
                     <div class="container mx-auto col-lg-6 mb-5 mt-5 gy-5" >
                         <div class="container2 mt-5 p-3 text-start">
@@ -238,7 +235,7 @@ function MyAccount() {
                                             <div className='col-4'>
                                                 <button type="button" class="btn btn-outline-success border border-3 border-success"><p>1000/Rs</p></button>
                                             </div>
-                                            <p class="col-8  text-end text-size"><i class="fa-solid fa-star text-warning"></i>3.4<br></br>(98 reviews)</p>
+                                            <p class="col-8 text-end text-size"><i class="fa-solid fa-star text-warning"></i>3.4<br></br>(98 reviews)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -254,7 +251,6 @@ function MyAccount() {
                             <h1>My Order</h1>
                         </div>
 
-                        {/* ============================ */}
                         <div class="accordion " id="accordionExample">
                             <div class="accordion-item  border-0">
                                 <h2 class="accordion-header border">
@@ -499,19 +495,6 @@ function MyAccount() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
                 <div class="tab-pane fade" id='password' role="tabpanel" aria-labelledby="profile-tab">
                     {/* -----------------------change password------------------------ */}
@@ -556,16 +539,6 @@ function MyAccount() {
                         </div>
                     </div></div>
             </div>
-
-
-
-
-
-
-
-
-
-
 
 
         </>
