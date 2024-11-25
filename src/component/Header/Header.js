@@ -1,23 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import home from '../Home';
 import Contact from '../Contact';
 import './Header.css';
+import Login from '../Login';
 
 export default function Header() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+    const [activeButton, setActiveButton] = useState(null);
 
-    useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-
-    }, []);
-
-    const dropdown = windowWidth > 768 ? 'dropstart ' : 'dropdown ';
-    const dropwidth = windowWidth > 768 ? 'dropdown-menu-large dropdown-menu overflow-x-hidden dropdown-menu-center overflow-scroll scroll p-3 mt-4 ' : 'dropdown-menu-small dropdown-menu overflow-x-hidden dropdown-menu-center overflow-scroll scroll p-3 mt-4 '
-
+    const handleButtonClick = (buttonName) => {
+        setActiveButton(buttonName);
+    };
 
 
     return (
@@ -32,8 +25,20 @@ export default function Header() {
                         <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="search products..." />
                     </div>
                     <div className="sing_in_up ">
-                        <Link href="# ">SIGN IN</Link>
+                        <Link to="">SIGN IN</Link>
                         <Link href="# ">SIGN UP</Link>
+                        {/* <button
+                            className={activeButton === "button1" ? "active" : ""}
+                            onClick={() => handleButtonClick("button1")}
+                        >
+                            Button 1
+                        </button>
+                        <button
+                            className={activeButton === "button2" ? "active" : ""}
+                            onClick={() => handleButtonClick("button2")}
+                        >
+                            Button 2
+                        </button> */}
                     </div>
                 </div>
             </section>
@@ -46,16 +51,21 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav m-auto mb-2 mb-lg-0 menu-items">
                             <li className="nav-item">
+                                <a class="btn all-categorie-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                                    All
+                                </a>
+                            </li>
+                            <li className="nav-item">
                                 <Link to='/' className="nav-link active" aria-current="page">Home</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/about' className="nav-link" href="#">Electronics</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='#' className="nav-link" href="#">Accessories</Link>
+                                <Link to='/accessories' className="nav-link" href="#">Accessories</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='#' className="nav-link" href="#">Computers</Link>
+                                <Link to='#' className="nav-link" href="#">Categorie</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='#' className="nav-link" href="#">Sports</Link>
@@ -64,119 +74,106 @@ export default function Header() {
                                 <Link to='/contact' className="nav-link" href="#">Contact</Link>
                             </li>
                         </ul>
+
                         <div className='header-icons'>
-                            <ul>
+                            <ul className='my-0'>
                                 <li>
+                                    <div class="dropdown me-1">
+                                        <Link className='' id="dropdownMenuOffset" data-bs-toggle="dropdown" style={{ paddingBottom: "7px", }}><i class="bi bi-cart me-2" style={{ fontSize: "20px" }}></i></Link>
+                                        <div>
 
-                                    <Link className='' id="dropdownMenuButton1" data-bs-toggle="dropdown"><i class="bi bi-cart"></i></Link>
-                                    <div className={dropdown}>
-                                        <div class={dropwidth} aria-labelledby="dropdownMenuButton1">
-                                            <p className='fw-bold fs-5'>Shopping cart</p>
-                                            <div class="card mb-3 border-0 border-bottom card-height" >
-                                                <div class="row ">
-                                                    <div class="col-lg-4 col-12">
-                                                        <img src="../images/tshirt.jpeg" class="img-fluid rounded-start ms-0 dd-img" alt="..." />
-                                                    </div>
-                                                    <div class="col-lg-8 col-12">
-                                                        <div class="card-body row py-0">
-                                                            <div className='col-8 lh-sm'>
-                                                                <p className='fw-bold '>Rey Nylon Backpack</p>
-                                                                <div className='row lh-sm'>
-                                                                    <p className='col-6 border-end text-secondary fs-7'>Black</p>
-                                                                    <p className='col-6 text-secondary fs-7'>2xl</p>
-                                                                </div>
-
-
-                                                                <p className='col-6 text-secondary fs-7'>Qty-1</p>
-                                                            </div>
-
-
-                                                            <div className='col-4 ms-auto py-0'>
-                                                                <button type="button" class="btn btn-outline-success">$74</button><br></br>
-                                                                <button type="button" class="btn btn-outline-none text-primary px-0 ">Remove</button>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card mb-3 border-0 border-bottom card-height" >
-                                                <div class="row ">
-                                                    <div class="col-lg-4 col-12">
-                                                        <img src="../images/tshirt.jpeg" class="img-fluid rounded-start ms-0 dd-img" alt="..." />
-                                                    </div>
-                                                    <div class="col-lg-8 col-12">
-                                                        <div class="card-body row py-0">
-                                                            <div className='col-8 lh-sm'>
-                                                                <p className='fw-bold '>Rey Nylon Backpack</p>
-                                                                <div className='row lh-sm'>
-                                                                    <p className='col-6 border-end text-secondary fs-7'>Black</p>
-                                                                    <p className='col-6 text-secondary fs-7'>2xl</p>
-                                                                </div>
-
-
-                                                                <p className='col-6 text-secondary fs-7'>Qty-1</p>
-                                                            </div>
-
-
-                                                            <div className='col-4 ms-auto py-0'>
-                                                                <button type="button" class="btn btn-outline-success">$74</button><br></br>
-                                                                <button type="button" class="btn btn-outline-none text-primary px-0 ">Remove</button>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card mb-3 border-0 border-bottom card-height" >
-                                                <div class="row ">
-                                                    <div class="col-lg-4 col-12">
-                                                        <img src="../images/tshirt.jpeg" class="img-fluid rounded-start ms-0 dd-img" alt="..." />
-                                                    </div>
-                                                    <div class="col-lg-8 col-12">
-                                                        <div class="card-body row py-0">
-                                                            <div className='col-8 lh-sm'>
-                                                                <p className='fw-bold '>Rey Nylon Backpack</p>
-                                                                <div className='row lh-sm'>
-                                                                    <p className='col-6 border-end text-secondary fs-7'>Black</p>
-                                                                    <p className='col-6 text-secondary fs-7'>2xl</p>
-                                                                </div>
-
-
-                                                                <p className='col-6 text-secondary fs-7'>Qty-1</p>
-                                                            </div>
-
-
-                                                            <div className='col-4 ms-auto py-0'>
-                                                                <button type="button" class="btn btn-outline-success">$74</button><br></br>
-                                                                <button type="button" class="btn btn-outline-none text-primary px-0 ">Remove</button>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='bg-light px-4 pt-4'>
-                                                <div className='row lh-sm'>
-                                                    <p className='col-6 fw-bold'>Subtotal</p>
-                                                    <p className='col-6 fw-bold text-end'>299</p>
-                                                </div>
-                                                <p className='text-secondary lh-sm'>Shipping and taxes calculated at checkout.</p>
-                                                <div className='row'>
-                                                    <div className=' col-6 '><button type="button" class="btn rounded-pill bg-white w-100">View cart</button></div>
-                                                    <div className=' col-6 '><button type="button" class="btn CO-btn text-light w-100  rounded-pill ">Checkout</button></div>
-
-                                                </div>
-                                            </div>
                                         </div>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                                            <div className='cart-heading px-3 pt-2'>
+                                                <h3>My Cart</h3>
+                                            </div>
+                                            <li class="dropdown-item product-list" style={{ maxHeight: "58vh", overflowY: "auto" }}>
 
+                                                <div className='cart-products mt-4'>
+                                                    <div className='row'>
+                                                        <div className='col-md-3'>
+                                                            <div className='img-bg rounded'>
+                                                                <img className='img-fluid' src='./images/fx-1.png' />
+                                                            </div>
+                                                        </div>
+                                                        <div className='col-md-9'>
+                                                            <div className='product-description'>
+                                                                <Link>
+                                                                    <h5>Rey Nylon Backpack <button className='price-btn float-end'>75$</button></h5>
+                                                                </Link>
 
+                                                                <p>Natura <span>| XL</span></p>
+                                                                <div class="d-flex flex-1 items-end justify-content-between text-sm">
+                                                                    <p class="text-gray-500 dark:text-slate-400">Qty 1</p>
+                                                                    <div class="flex">
+                                                                        <button type="button" class="item-remove-btn">Remove</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
+                                                    </div>
+                                                </div>
+                                                <div className='cart-products mt-4'>
+                                                    <div className='row'>
+                                                        <div className='col-md-3'>
+                                                            <div className='img-bg rounded'>
+                                                                <img className='img-fluid' src='./images/fx-2.png' />
+                                                            </div>
+                                                        </div>
+                                                        <div className='col-md-9'>
+                                                            <div className='product-description'>
+                                                                <Link>
+                                                                    <h5>Rey Nylon Backpack <button className='price-btn float-end'>75$</button></h5>
+                                                                </Link>
+
+                                                                <p>Natura <span>| XL</span></p>
+                                                                <div class="d-flex flex-1 items-end justify-content-between text-sm">
+                                                                    <p class="text-gray-500 dark:text-slate-400">Qty 1</p>
+                                                                    <div class="flex">
+                                                                        <button type="button" class="item-remove-btn">Remove</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div className='cart-products mt-4'>
+                                                    <div className='row'>
+                                                        <div className='col-md-3'>
+                                                            <div className='img-bg rounded'>
+                                                                <img className='img-fluid' src='./images/fx-3.png' />
+                                                            </div>
+                                                        </div>
+                                                        <div className='col-md-9'>
+                                                            <div className='product-description'>
+                                                                <Link>
+                                                                    <h5>Rey Nylon Backpack <button className='price-btn float-end'>75$</button></h5>
+                                                                </Link>
+
+                                                                <p>Natura <span>| XL</span></p>
+                                                                <div class="d-flex flex-1 items-end justify-content-between text-sm">
+                                                                    <p class="text-gray-500 dark:text-slate-400">Qty 1</p>
+                                                                    <div class="flex">
+                                                                        <button type="button" class="item-remove-btn">Remove</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <p style={{ marginBottom: "0px", fontWeight: "600" }}>Subtotal <span className='float-end'>$299.00</span></p>
+                                                <span style={{ fontSize: '12px', color: "#6e7d92" }}>Shipping and taxes calculated at checkout.</span>
+                                            </li>
+                                            <li class="dropdown-item"></li>
+                                        </ul>
                                     </div>
+                                    <Link style={{ marginTop: "1px" }}><i class="bi bi-heart" style={{ fontSize: "20px" }}></i></Link>
 
-
-
-                                    <Link><i class="bi bi-heart"></i></Link>
                                 </li>
                             </ul>
                         </div>
@@ -184,6 +181,106 @@ export default function Header() {
 
                 </div>
             </nav>
+            <div class="offcanvas offcanvas-start all-categories" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Digital Content and Devices</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style={{fontSize:"12px"}}></button>
+                </div>
+                <div class="offcanvas-body pt-0">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Electronics
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a data-replace="Laptops"><span>Laptops</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Computers"><span>Computers</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Smart Phones"><span>Smart Phones</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Wireless Charger"><span>Wireless Charger</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Air Buds"><span>Air Buds</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Home & Kitchen
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a data-replace="Kitchen & Dining"><span>Kitchen & Dining</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Home Decor"><span>Home Decor</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Furniture"><span>Furniture</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Kitchen Storage & Containers"><span>Kitchen Storage & Containers</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Bedroom Linen"><span>Bedroom Linen</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Sports & Fitness
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <a data-replace="Cricket"><span>Cricket</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Badminton"><span>Badminton</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Fitness Accessories"><span>Fitness Accessories</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Cardio Equipment"><span>Cardio Equipment</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="Sports Collectibles"><span>Sports Collectibles</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="All Exercise & Fitness"><span>All Exercise & Fitness</span></a>
+                                        </li>
+                                        <li>
+                                            <a data-replace="All Exercise & Fitness"><span>All Exercise & Fitness</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
