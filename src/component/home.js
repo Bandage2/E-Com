@@ -229,11 +229,11 @@ export default function Home() {
                                     </div>
                                     <div class="card-body">
                                         <ul className='d-flex flex-direction-row justify-content-between'>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
                                         </ul>
                                         <h5 class="card-title mt-4">Campus Sutra</h5>
                                         <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
@@ -265,11 +265,11 @@ export default function Home() {
                                     </div>
                                     <div class="card-body">
                                         <ul className='d-flex flex-direction-row justify-content-between'>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
                                         </ul>
                                         <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
                                         <p class="card-text">Redmi Pad SE| All Day Battery</p>
@@ -303,11 +303,11 @@ export default function Home() {
                                     </div>
                                     <div class="card-body">
                                         <ul className='d-flex flex-direction-row justify-content-between'>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
                                         </ul>
                                         <h5 class="card-title mt-4">Campus Sutra</h5>
                                         <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
@@ -339,11 +339,11 @@ export default function Home() {
                                     </div>
                                     <div class="card-body">
                                         <ul className='d-flex flex-direction-row justify-content-between'>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
-                                            <li className='rounded-circle'><div className='product-color'></div></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
+                                            <li className='rounded-circle'><a className='product-color'></a></li>
                                         </ul>
                                         <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
                                         <p class="card-text">Redmi Pad SE| All Day Battery</p>
@@ -394,7 +394,7 @@ export default function Home() {
                                     <div className='col-md-4'>
                                         <div className='f-product'>
                                             <div className='d-flex justify-content-between align-items-baseline'>
-                                                <div className='tab-product-color w-20 h-20 rounded-circle mb-5'>
+                                                <div assName='tab-product-color w-20 h-20 rounded-circle mb-5'>
                                                     <img src='/images/fx-3.png' width={50} style={{ margin: " 17px 20px" }} />
                                                 </div>
                                                 <div className=''>
@@ -412,7 +412,7 @@ export default function Home() {
                                     <div className='col-md-4'>
                                         <div className='f-product'>
                                             <div className='d-flex justify-content-between align-items-baseline'>
-                                                <div className='tab-product-color w-20 h-20 rounded-circle mb-5'>
+                                                <div assName='tab-product-color w-20 h-20 rounded-circle mb-5'>
                                                     <img src='/images/fx-3.png' width={50} style={{ margin: " 17px 20px" }} />
                                                 </div>
                                                 <div className=''>
@@ -430,7 +430,7 @@ export default function Home() {
                                     <div className='col-md-4'>
                                         <div className='f-product'>
                                             <div className='d-flex justify-content-between align-items-baseline'>
-                                                <div className='tab-product-color w-20 h-20 rounded-circle mb-5'>
+                                                <div assName='tab-product-color w-20 h-20 rounded-circle mb-5'>
                                                     <img src='/images/fx-3.png' width={50} style={{ margin: " 17px 20px" }} />
                                                 </div>
                                                 <div className=''>
@@ -454,7 +454,7 @@ export default function Home() {
                                     <div className='col-md-4'>
                                         <div className='f-product'>
                                             <div className='d-flex justify-content-between align-items-baseline'>
-                                                <div className='tab-product-color w-20 h-20 rounded-circle mb-5'>
+                                                <div assName='tab-product-color w-20 h-20 rounded-circle mb-5'>
                                                     <img src='/images/fx-3.png' width={50} style={{ margin: " 17px 20px" }} />
                                                 </div>
                                                 <div className=''>
@@ -472,7 +472,7 @@ export default function Home() {
                                     <div className='col-md-4'>
                                         <div className='f-product'>
                                             <div className='d-flex justify-content-between align-items-baseline'>
-                                                <div className='tab-product-color w-20 h-20 rounded-circle mb-5'>
+                                                <div assName='tab-product-color w-20 h-20 rounded-circle mb-5'>
                                                     <img src='/images/fx-2.png' width={50} style={{ margin: " 17px 20px" }} />
                                                 </div>
                                                 <div className=''>
@@ -490,7 +490,7 @@ export default function Home() {
                                     <div className='col-md-4'>
                                         <div className='f-product'>
                                             <div className='d-flex justify-content-between align-items-baseline'>
-                                                <div className='tab-product-color w-20 h-20 rounded-circle mb-5'>
+                                                <div assName='tab-product-color w-20 h-20 rounded-circle mb-5'>
                                                     <img src='/images/fx-1.png' width={50} style={{ margin: " 17px 20px" }} />
                                                 </div>
                                                 <div className=''>
@@ -572,11 +572,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Campus Sutra</h5>
                                                     <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
@@ -612,11 +612,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Campus Sutra</h5>
                                                     <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
@@ -649,11 +649,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
                                                     <p class="card-text">Redmi Pad SE| All Day Battery</p>
@@ -689,11 +689,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Campus Sutra</h5>
                                                     <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
@@ -726,11 +726,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
                                                     <p class="card-text">Redmi Pad SE| All Day Battery</p>
@@ -766,11 +766,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Campus Sutra</h5>
                                                     <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
@@ -803,11 +803,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
                                                     <p class="card-text">Redmi Pad SE| All Day Battery</p>
@@ -843,11 +843,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Campus Sutra</h5>
                                                     <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
@@ -880,11 +880,11 @@ export default function Home() {
                                                 </div>
                                                 <div class="card-body">
                                                     <ul className='d-flex flex-direction-row justify-content-between'>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
-                                                        <li className='rounded-circle'><div className='product-color'></div></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
+                                                        <li className='rounded-circle'><a className='product-color'></a></li>
                                                     </ul>
                                                     <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
                                                     <p class="card-text">Redmi Pad SE| All Day Battery</p>

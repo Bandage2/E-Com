@@ -86,108 +86,159 @@ function MyAccount() {
                 <div class="tab-pane fade" id='savelist' role="tabpanel" aria-labelledby="profile-tab">
                     {/* ----------------------------------------save lists----------------------------------- */}
 
-                    <div class="container mx-auto col-lg-6 mb-5 mt-5 gy-5" >
+                    <div class="container save-list-products col-lg-10 mb-5 mt-5 gy-5" >
                         <div class="container2 mt-5 p-3 text-start">
-                            <h1>List of saved products</h1>
+                            <h2 class="discover-text semiBold">List of saved products<span class="">. </span><span class="text-neutral-500 dark:text-neutral-400">Good things are waiting for you</span></h2>
                         </div>
-
                         <div className='row'>
-                            <div className='col-lg-4 col-md-6 col-sm-12'>
-                                <div class="card box">
-                                    <div className="img-shape">
-                                        <img src="./images/fx-1.png" class="card-img-top" alt="..." />
-                                        <div className='layer position-relative d-flex justify-content-center'>
-                                            <button type="button" class="btn btn-light">S</button>
-                                            <button type="button" class="btn btn-light">M</button>
-                                            <button type="button" class="btn btn-light">L</button>
-                                            <button type="button" class="btn btn-light">XL</button>
-                                            <button type="button" class="btn btn-light">XXL</button>
-                                        </div>
-                                    </div>
-                                    <div class="card-body bg-white">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">text here!!!!</p>
-                                        {/* <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> */}
-                                        <div class="row bt-size">
-                                            <div className='col-4'>
-                                                <button type="button" class="btn btn-outline-success border border-3 border-success"><p>1000/Rs</p></button>
+                            <div className='col-md-3 col-sm-6'>
+                                <div className='fx-product'>
+                                    <div class="card border-0">
+                                        <div className='img-bg'>
+                                            <img src="/images/fx-2.png" class="card-img-top" alt="..." />
+                                            <div className='product-size btns'>
+                                                <ul className='d-flex flex-direction-row justify-content-between'>
+                                                    <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
+                                                    <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                </ul>
                                             </div>
-                                            <p class="col-8  text-end text-size"><i class="fa-solid fa-star text-warning"></i>3.4<br></br>(98 reviews)</p>
                                         </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className='col-lg-4 col-md-6 col-sm-12 mb-5'>
-                                <div class="card box">
-                                    <div className="img-shape">
-                                        <img src="./images/fx-1.png" class="card-img-top" alt="..." />
-                                        <div className='layer position-relative d-flex justify-content-center'>
-                                            <button type="button" class="btn btn-light">S</button>
-                                            <button type="button" class="btn btn-light">M</button>
-                                            <button type="button" class="btn btn-light">L</button>
-                                            <button type="button" class="btn btn-light">XL</button>
-                                            <button type="button" class="btn btn-light">XXL</button>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">text here!!!!</p>
-                                        <div class="row bt-size">
-                                            <div className='col-4'>
-                                                <button type="button" class="btn btn-outline-success border border-3 border-success"><p>1000/Rs</p></button>
+                                        <div class="card-body">
+                                            <ul className='d-flex flex-direction-row justify-content-between'>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                            </ul>
+                                            <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
+                                            <p class="card-text product-mini-details mb-1">Redmi Pad SE| All Day Battery</p>
+                                            <p class="card-text product-rate">₹1,699 <span style={{fontSize: "10px", color:" #9d9d9d",}}>M.R.P: ₹4,500 </span> <span style={{fontSize: "12px"}}>(62% off)</span><br />
+                                            <span style={{fontSize: "12px", color:"rgb(123 121 121)",}}>Save 1% with coupon</span></p>
+                                            <div className='d-flex justify-content-between align-items-baseline'>
+                                                <p className='mb-0' style={{fontSize:"10px"}}>900+ bought in past month</p>
+                                            {/* <a href="#" class="rate-btn">89$</a> */}
+                                                <div className='reviews'>
+                                                    <i class="bi bi-star-fill me-1"></i>
+                                                    <span>
+                                                        4.9 (89 reviews)
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <p class="col-8  text-end text-size"><i class="fa-solid fa-star text-warning"></i>3.4<br></br>(98 reviews)</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='col-lg-4 col-md-6 col-sm-12 mb-5'>
-                                <div class="card box">
-                                    <div className="img-shape">
-                                        <img src="./images/fx-1.png" class="card-img-top" alt="..." />
-                                        <div className='layer position-relative d-flex justify-content-center'>
-                                            <button type="button" class="btn btn-light">S</button>
-                                            <button type="button" class="btn btn-light">M</button>
-                                            <button type="button" class="btn btn-light">L</button>
-                                            <button type="button" class="btn btn-light">XL</button>
-                                            <button type="button" class="btn btn-light">XXL</button>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">text here!!!!</p>
-                                        <div class="row bt-size">
-                                            <div className='col-4'>
-                                                <button type="button" class="btn btn-outline-success border border-3 border-success"><p>1000/Rs</p></button>
+                            <div className='col-md-3 col-sm-6 mb-5'>
+                            <div className='fx-product'>
+                                    <div class="card border-0">
+                                        <div className='img-bg'>
+                                            <img src="/images/fx-2.png" class="card-img-top" alt="..." />
+                                            <div className='product-size btns'>
+                                                <ul className='d-flex flex-direction-row justify-content-between'>
+                                                    <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
+                                                    <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                </ul>
                                             </div>
-                                            <p class="col-8  text-end text-size"><i class="fa-solid fa-star text-warning"></i>3.4<br></br>(98 reviews)</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul className='d-flex flex-direction-row justify-content-between'>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                            </ul>
+                                            <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
+                                            <p class="card-text product-mini-details mb-1">Redmi Pad SE| All Day Battery</p>
+                                            <p class="card-text product-rate">₹1,699 <span style={{fontSize: "10px", color:" #9d9d9d",}}>M.R.P: ₹4,500 </span> <span style={{fontSize: "12px"}}>(62% off)</span><br />
+                                            <span style={{fontSize: "12px", color:"rgb(123 121 121)",}}>Save 1% with coupon</span></p>
+                                            <div className='d-flex justify-content-between align-items-baseline'>
+                                                <p className='mb-0' style={{fontSize:"10px"}}>900+ bought in past month</p>
+                                            {/* <a href="#" class="rate-btn">89$</a> */}
+                                                <div className='reviews'>
+                                                    <i class="bi bi-star-fill me-1"></i>
+                                                    <span>
+                                                        4.9 (89 reviews)
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='col-lg-4 col-md-6 col-sm-12 mb-5'>
-                                <div class="card box">
-                                    <div className="img-shape">
-                                        <img src="./images/fx-1.png" class="card-img-top" alt="..." />
-                                        <div className='layer position-relative d-flex justify-content-center'>
-                                            <button type="button" class="btn btn-light">S</button>
-                                            <button type="button" class="btn btn-light">M</button>
-                                            <button type="button" class="btn btn-light">L</button>
-                                            <button type="button" class="btn btn-light">XL</button>
-                                            <button type="button" class="btn btn-light">XXL</button>
+                            <div className='col-md-3 col-sm-6 mb-5'>
+                            <div className='fx-product'>
+                                    <div class="card border-0">
+                                        <div className='img-bg'>
+                                            <img src="/images/fx-2.png" class="card-img-top" alt="..." />
+                                            <div className='product-size btns'>
+                                                <ul className='d-flex flex-direction-row justify-content-between'>
+                                                    <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
+                                                    <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul className='d-flex flex-direction-row justify-content-between'>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                            </ul>
+                                            <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
+                                            <p class="card-text product-mini-details mb-1">Redmi Pad SE| All Day Battery</p>
+                                            <p class="card-text product-rate">₹1,699 <span style={{fontSize: "10px", color:" #9d9d9d",}}>M.R.P: ₹4,500 </span> <span style={{fontSize: "12px"}}>(62% off)</span><br />
+                                            <span style={{fontSize: "12px", color:"rgb(123 121 121)",}}>Save 1% with coupon</span></p>
+                                            <div className='d-flex justify-content-between align-items-baseline'>
+                                                <p className='mb-0' style={{fontSize:"10px"}}>900+ bought in past month</p>
+                                            {/* <a href="#" class="rate-btn">89$</a> */}
+                                                <div className='reviews'>
+                                                    <i class="bi bi-star-fill me-1"></i>
+                                                    <span>
+                                                        4.9 (89 reviews)
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">text here!!!!</p>
-                                        <div class="row bt-size">
-                                            <div className='col-4'>
-                                                <button type="button" class="btn btn-outline-success border border-3 border-success"><p>1000/Rs</p></button>
+                                </div>
+                            </div>
+                            <div className='col-md-3 col-sm-6 mb-5'>
+                            <div className='fx-product'>
+                                    <div class="card border-0">
+                                        <div className='img-bg'>
+                                            <img src="/images/fx-2.png" class="card-img-top" alt="..." />
+                                            <div className='product-size btns'>
+                                                <ul className='d-flex flex-direction-row justify-content-between'>
+                                                    <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
+                                                    <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                </ul>
                                             </div>
-                                            <p class="col-8  text-end text-size"><i class="fa-solid fa-star text-warning"></i>3.4<br></br>(98 reviews)</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul className='d-flex flex-direction-row justify-content-between'>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                                <li className='rounded-circle'><a className='product-color'></a></li>
+                                            </ul>
+                                            <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
+                                            <p class="card-text product-mini-details mb-1">Redmi Pad SE| All Day Battery</p>
+                                            <p class="card-text product-rate">₹1,699 <span style={{fontSize: "10px", color:" #9d9d9d",}}>M.R.P: ₹4,500 </span> <span style={{fontSize: "12px"}}>(62% off)</span><br />
+                                            <span style={{fontSize: "12px", color:"rgb(123 121 121)",}}>Save 1% with coupon</span></p>
+                                            <div className='d-flex justify-content-between align-items-baseline'>
+                                                <p className='mb-0' style={{fontSize:"10px"}}>900+ bought in past month</p>
+                                            {/* <a href="#" class="rate-btn">89$</a> */}
+                                                <div className='reviews'>
+                                                    <i class="bi bi-star-fill me-1"></i>
+                                                    <span>
+                                                        4.9 (89 reviews)
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,92 +297,190 @@ function MyAccount() {
                 <div class="tab-pane fade" id='myorder' role="tabpanel" aria-labelledby="contact-tab">
 
                     {/* ---------------------------my order--------------------------- */}
-                    <div class="container acc-grey mx-auto col-lg-6 mb-5" >
+                    <div class="container acc-grey col-lg-8 mb-5" >
                         <div class="container2 mt-5 p-3 text-start ">
                             <h1>My Order</h1>
                         </div>
 
-                        <div class="accordion " id="accordionExample">
-                            <div class="accordion-item  border-0">
+                        <div class="accordion order-list" id="accordionExample">
+                            <div class="accordion-item">
                                 <h2 class="accordion-header border">
-                                    <button class="accordion-button text-black" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                        <div className=' w-100' >
-
-                                            <div className='row'>
-                                                <div className='col-lg-8 col-5 ps-0 ps-md-2' >
-                                                    <p className='fw-bold  fs-4 acc-heading-size'>Order ID : #123</p>
-                                                </div>
-                                                <div className='col-lg-4 col-7'>
-                                                    <div className='row'>
-                                                        <div className='col-lg-6 col-6 px-1 '>
-                                                            <button type="button" class="btn btn-light border p-1 w-100 fs-7 px-auto">
-                                                                <p className='d-md-flex mx-auto p-0 m-0'><i class="fa-solid d-none d-md-block  fa-file-invoice-dollar pe-2"></i>Invoice</p>
-                                                            </button>
-                                                        </div>
-                                                        <div className='col-lg-6 col-6 px-1'>
-                                                            <button type="button" class="btn btn-primary p-1 w-100 fs-7 d-flex px-auto"><p className='d-flex mx-auto p-0 m-0'>Track order <i class="fa-solid fa-location-crosshairs d-none d-md-block pt-1 ps-1"></i></p></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <button class="accordion-button text-black pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        <div className='row w-100'>
+                                            <div className='col-md-6'>
+                                                <h4>Order ID: 23931</h4>
                                             </div>
-                                            <div className='row'>
-                                                <div className='col-lg-3 col-md-5 d-flex'>
-                                                    <p className='text-secondary fs-7 mb-0'>Order Date:<span className='fw-bold'> July 19, 2024</span></p>
-                                                    <p className='d-none d-lg-block m-0 p-0'>|</p>
-                                                </div>
-                                                <div className='col-lg-9 col-md-7'>
-                                                    <p className='fs-7 fw-bold mb-0 delivery-color'><i class="fa-solid fa-truck me-1"></i>Estimated Delivery: Aug 17, 2024</p>
+                                            <div className='col-md-6'>
+                                                <div className='order-btn text-end'>
+                                                    <button className='order-invoice'><i class="bi bi-file-earmark-text"></i>Invoice</button>
+                                                    <button className='btn btn-primary track-order'><i class="bi bi-geo"></i>Track order</button>
 
                                                 </div>
+
+                                            </div>
+                                            <div className='order-date'>
+                                                <p>order Date: <span>Feb 16, 2022  |  </span><span><i class="bi bi-airplane me-1"></i>Estimated delivery: May 14, 2022</span></p>
                                             </div>
                                         </div>
+
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <div className="row">
-                                            <div className='col-lg-2 col-3 m-0 p-0'>
-                                                <div className='fit-content'>
-                                                    <img src="./images/fx-1.png" class="card-img-top img-size-acc border rounded" alt="..." /></div>
-                                            </div>
-                                            <div className='col-lg-7 col-7 d-flex flex-column justify-content-center ms-0 ps-md-0 ps-1'>
-                                                <p className='mb-0'>MacBook Pro</p>
-                                                <div className='d-flex text-secondary fs-7'>
-                                                    <div className='fit-content '>
-                                                        <p className='m-0 pe-md-2 pe-1'>Space Grey</p>
-                                                    </div>
-                                                    <div className='fit-content border border-top-0 border-bottom-0 border-secondary'>
-                                                        <p className='m-0 px-md-2 px-1'>32 gb</p>
-                                                    </div>
-                                                    <div className='fit-content'>
-                                                        <p className='m-0 px-md-2 ps-1 '>1TB</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className='col-lg-3 col-2 p-0 text-end d-flex flex-column justify-content-center'>
-                                                <p className='fw-bold f-8 mb-0'>1000/Rs</p>
-                                                <p className='m-0 text-secondary fs-7'>Qty:1</p>
-                                            </div>
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="flush-headingOne">
+                                                    <button class="accordion-button d-block collapsed border-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                        <div className='row'>
+                                                            <div className='col-md-2'>
+                                                                <div className='order-list-img'>
+                                                                    <img className='img-fluid' src='./images/fx-1.png' width={"65px"} />
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-md-5 pt-3 order-description'>
+                                                                <h4>MacBook</h4>
+                                                                <p>Space Grey | 32GB | 1TB</p>
 
-                                            <hr className='text-secondary my-3'></hr>
-                                            <div className='row'>
-                                                <div className='col-6'>
-                                                    <p className='fw-bold f-8'>Payment</p>
-                                                    <p className='f-9'>MacBook Pro</p>
+                                                            </div>
+                                                            <div className='col-md-5 pt-3 order-description text-end'>
+                                                                <h4 style={{ fontWeight: '700' }}>$234</h4>
+                                                                <p>Qty1</p>
+                                                            </div>
+
+                                                        </div>
+                                                    </button>
+
+                                                </h2>
+                                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+
+                                                        <div className='row'>
+                                                            <div className='col-md-6'>
+                                                                <div className='payment-description'>
+                                                                    <h4>Payment</h4>
+                                                                    <h6 className='mt-2'>Visa***23 <span class="badge bg-secondary">Visa</span></h6>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-md-6'>
+                                                                <div className='payment-description'>
+                                                                    <h4>Delivery</h4>
+                                                                    <p>Address</p>
+                                                                    <h6 style={{ lineHeight: "1.7" }}>
+                                                                        123 Civil Lines Metro Station OK Apt. <br />
+                                                                        jaipur Rajasthan <br />
+                                                                        1234-45-6550
+                                                                    </h6>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div className='col-6'>
-                                                    <p className='fw-bold f-8'>Delivery</p>
-                                                    <p className='m-0 pe-2  text-secondary fs-7'>Address</p>
-                                                    <p className='m-0 f-9'>abcd, flat no.4</p>
-                                                    <p className='m-0 f-9'>jaipur</p>
-                                                    <p className='m-0 f-9'>3654 3654 3654</p>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="flush-headingTwo">
+                                                    <button class="accordion-button d-block border-bottom collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                        <div className='row'>
+                                                            <div className='col-md-2'>
+                                                                <div className='order-list-img'>
+                                                                    <img className='img-fluid' src='./images/fx-1.png' width={"65px"} />
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-md-5 pt-3 order-description'>
+                                                                <h4>MacBook</h4>
+                                                                <p>Space Grey | 32GB | 1TB</p>
+
+                                                            </div>
+                                                            <div className='col-md-5 pt-3 order-description text-end'>
+                                                                <h4 style={{ fontWeight: '700' }}>$234</h4>
+                                                                <p>Qty1</p>
+                                                            </div>
+
+                                                        </div>
+                                                    </button>
+                                                </h2>
+                                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div className='row'>
+                                                            <div className='col-md-6'>
+                                                                <div className='payment-description'>
+                                                                    <h4>Payment</h4>
+                                                                    <h6 className='mt-2'>Visa***23 <span class="badge bg-secondary">Visa</span></h6>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-md-6'>
+                                                                <div className='payment-description'>
+                                                                    <h4>Delivery</h4>
+                                                                    <p>Address</p>
+                                                                    <h6 style={{ lineHeight: "1.7" }}>
+                                                                        123 Civil Lines Metro Station OK Apt. <br />
+                                                                        jaipur Rajasthan <br />
+                                                                        1234-45-6550
+                                                                    </h6>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="flush-headingThree">
+                                                    <button class="accordion-button d-block border-bottom collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                        <div className='row'>
+                                                            <div className='col-md-2'>
+                                                                <div className='order-list-img'>
+                                                                    <img className='img-fluid' src='./images/fx-1.png' width={"65px"} />
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-md-5 pt-3 order-description'>
+                                                                <h4>MacBook</h4>
+                                                                <p>Space Grey | 32GB | 1TB</p>
+
+                                                            </div>
+                                                            <div className='col-md-5 pt-3 order-description text-end'>
+                                                                <h4 style={{ fontWeight: '700' }}>$234</h4>
+                                                                <p>Qty1</p>
+                                                            </div>
+
+                                                        </div>
+                                                    </button>
+                                                </h2>
+                                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">
+                                                        <div className='row'>
+                                                            <div className='col-md-6'>
+                                                                <div className='payment-description'>
+                                                                    <h4>Payment</h4>
+                                                                    <h6 className='mt-2'>Visa***23 <span class="badge bg-secondary">Visa</span></h6>
+                                                                </div>
+                                                            </div>
+                                                            <div className='col-md-6'>
+                                                                <div className='payment-description'>
+                                                                    <h4>Delivery</h4>
+                                                                    <p>Address</p>
+                                                                    <h6 style={{ lineHeight: "1.7" }}>
+                                                                        123 Civil Lines Metro Station OK Apt. <br />
+                                                                        jaipur Rajasthan <br />
+                                                                        1234-45-6550
+                                                                    </h6>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-item border-0">
+                            {/* <div class="accordion-item border-0">
                                 <h2 class="accordion-header border">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <div className=' w-100' >
@@ -409,8 +558,8 @@ function MyAccount() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item border-0">
+                            </div> */}
+                            {/* <div class="accordion-item border-0">
                                 <h2 class="accordion-header border">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <div className=' w-100' >
@@ -488,7 +637,7 @@ function MyAccount() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>

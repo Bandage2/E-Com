@@ -92,7 +92,7 @@ a{
     line-height: 2.5rem;
     font-weight: 600;
 }
-.second-section .discover-text span{
+.second-section .discover-text span, .save-list-products .discover-text span{
     color: #6b7280;
 }
 .second-section .bg-yellow {
@@ -286,7 +286,22 @@ a{
     opacity: 1;
     top: 50%;
 }
+#collection .img-content p {
+    font-size: 1.6rem;
+}
 
+#collection .img-content a {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px !important;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}
 
 /* //........ Content 2 ........// */
 
@@ -455,6 +470,13 @@ a{
 .fx-product .product-size ul li{
     list-style-type: none;
 }
+.fx-product .product-mini-details{
+    font-size: 12px;
+}
+.fx-product .product-rate{
+    font-size: 15px;
+    margin: 10px 0px;
+}
 .fx-product .product-size ul li a{
     background-color: #fff;
     padding: 10px;
@@ -479,7 +501,7 @@ a{
 
 }
 .fx-product .product-color{
-    padding: 10px;
+    padding: 8px 12px;
 }
 .fx-product .card-body ul li{
     list-style-type: none;
@@ -501,7 +523,7 @@ a{
     background-color: #f10bcf;
 }
 .fx-product .card-body {
-    height: 190px;
+    height: 14rem;
     position: relative
 }
 .card-body .d-flex.justify-content-between.align-items-baseline{
@@ -563,12 +585,9 @@ a{
 }
 .fx-product .img-bg:hover .product-size {
     opacity: 1;
-    top: 50%;
+    top: 44%;
 }
-.fx-product .img-bg:hover .product-size {
-    opacity: 1;
-    top: 50%;
-}
+
 .fx-product .fx-product .card-title{
     font-size: 16px;
 }
@@ -584,7 +603,7 @@ a{
     font-size: 9px;
 }
 .fx-product .reviews{
-    font-size: 12px;
+    font-size: 11px;
 }
 .fx-product .reviews .bi.bi-star-fill{
     color: #fbbf24;
@@ -692,6 +711,71 @@ a{
     width: -webkit-fill-available;
     height: 100%;
     background-repeat: no-repeat;
+}
+/* //.............. My Account Section .............// */
+.order-invoice {
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 5px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+    margin-right: 7px;
+}
+.track-order {
+    font-size: 13px !important;
+    padding: 5px 14px !important;
+}
+.order-list .order-list-img {
+    background-color: rgb(238 244 251);
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    width: fit-content;
+}
+.order-list .order-description h4, .payment-description h4{
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+.order-list .order-description p, .payment-description p{
+    color: #aba5a5;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+.order-list .payment-description h6{
+    font-size: 13px;
+    color: #6b7280;
+}
+.order-list .payment-description .badge{
+    color: rgb(55, 48, 163);
+    background-color: rgb(224, 231, 255) !important;
+    font-style: italic;
+}
+.order-list .order-date p {
+    color: #a9a9aacc;
+    font-size: 13px;
+    margin-bottom: 0px;
+    margin-top: 8px;
+}
+.order-list .order-date p span:nth-child(1){
+    font-size: 12px;
+    color: #6b7280;
+}
+.order-list .order-date p span:nth-child(2){
+    font-size: 12px;
+    color: #0c9118;
+}
+/* // ........... SAve List In My Account............./// */
+.save-list-products a.rate-btn {
+    text-decoration: none;
+    font-size: 12px;
+    color: #08c26c;
+    border: 1px solid #08c26b;
+    padding: 4px 11px;
+    border-radius: 25px;
+}
+.save-list-products a.rate-btn:hover{
+    background-color: #08c26b;
+    color: #fff;
 }
 /* //....... Media Queries .......// */
 @media (max-width:768px){
