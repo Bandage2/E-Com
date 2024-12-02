@@ -99,7 +99,7 @@ export default function Home() {
                         spaceBetween={30}
                         slidesOffsetBefore={100}
                         autoplay={{
-                            delay: 2500,
+                            delay: 25000,
                             disableOnInteraction: false,
                         }}
                         modules={[Pagination, Autoplay]}
@@ -108,9 +108,9 @@ export default function Home() {
                             <div className='row'>
                                 <div className='bg-yellow-content col'>
                                     <span class="block mb-2 text-sm text-slate-700">Explore new arrivals</span>
-                                    <h2 class="text-slate-900 font-semibold">Shop the latest <br /> from top brands</h2>
+                                    <h2 class="text-slate-900 font-semibold">Shop the latest <br />brands</h2>
                                     <div class="mt-auto">
-                                        <button class="slider-btn text-sm py-3 px-4 mt-4">
+                                        <button class="slider-btn text-sm py-3 px-4">
                                             Show me all
                                         </button>
                                     </div>
@@ -236,9 +236,11 @@ export default function Home() {
                                             <li className='rounded-circle'><a className='product-color'></a></li>
                                         </ul>
                                         <h5 class="card-title mt-4">Campus Sutra</h5>
-                                        <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
+                                        <p class="card-text product-mini-details mb-1">Self-Design Sugarcane Regular Fit Shirt </p>
+                                        <p class="card-text product-rate">₹1,699 <span style={{ fontSize: "10px", color: " #9d9d9d", }}>M.R.P:  <span style={{ textDecorationLine: "line-through" }}>₹4,500</span></span> <span style={{ fontSize: "12px" }}>(62% off)</span><br />
+                                            <span style={{ fontSize: "12px", color: "rgb(123 121 121)", }}>Save 1% with coupon</span></p>
                                         <div className='d-flex justify-content-between align-items-baseline'>
-                                            <a href="#" class="buy-btn">Buy Now</a>
+                                            <p className='mb-0' style={{ fontSize: "10px" }}>900+ bought in past month</p>
                                             <div className='reviews'>
                                                 <i class="bi bi-star-fill me-1"></i>
                                                 <span>
@@ -272,9 +274,11 @@ export default function Home() {
                                             <li className='rounded-circle'><a className='product-color'></a></li>
                                         </ul>
                                         <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
-                                        <p class="card-text">Redmi Pad SE| All Day Battery</p>
+                                        <p class="card-text product-mini-details mb-1">Redmi Pad SE| All Day Battery</p>
+                                        <p class="card-text product-rate">₹1,699 <span style={{ fontSize: "10px", color: " #9d9d9d", }}>M.R.P:  <span style={{ textDecorationLine: "line-through" }}>₹4,500</span></span> <span style={{ fontSize: "12px" }}>(62% off)</span><br />
+                                            <span style={{ fontSize: "12px", color: "rgb(123 121 121)", }}>Save 1% with coupon</span></p>
                                         <div className='d-flex justify-content-between align-items-baseline'>
-                                            <a href="#" class="buy-btn">Buy Now</a>
+                                            <p className='mb-0' style={{ fontSize: "10px" }}>900+ bought in past month</p>
                                             <div className='reviews'>
                                                 <i class="bi bi-star-fill me-1"></i>
                                                 <span>
@@ -310,9 +314,11 @@ export default function Home() {
                                             <li className='rounded-circle'><a className='product-color'></a></li>
                                         </ul>
                                         <h5 class="card-title mt-4">Campus Sutra</h5>
-                                        <p class="card-text">Self-Design Sugarcane Regular Fit Shirt </p>
+                                        <p class="card-text product-mini-details mb-1">Self-Design Sugarcane Regular Fit Shirt </p>
+                                        <p class="card-text product-rate">₹1,699 <span style={{ fontSize: "10px", color: " #9d9d9d", }}>M.R.P:  <span style={{ textDecorationLine: "line-through" }}>₹4,500</span></span> <span style={{ fontSize: "12px" }}>(62% off)</span><br />
+                                            <span style={{ fontSize: "12px", color: "rgb(123 121 121)", }}>Save 1% with coupon</span></p>
                                         <div className='d-flex justify-content-between align-items-baseline'>
-                                            <a href="#" class="buy-btn">Buy Now</a>
+                                            <p className='mb-0' style={{ fontSize: "10px" }}>900+ bought in past month</p>
                                             <div className='reviews'>
                                                 <i class="bi bi-star-fill me-1"></i>
                                                 <span>
@@ -346,9 +352,11 @@ export default function Home() {
                                             <li className='rounded-circle'><a className='product-color'></a></li>
                                         </ul>
                                         <h5 class="card-title mt-4">Xiaomi Pad 6</h5>
-                                        <p class="card-text">Redmi Pad SE| All Day Battery</p>
+                                        <p class="card-text product-mini-details mb-1">Redmi Pad SE| All Day Battery</p>
+                                        <p class="card-text product-rate">₹1,699 <span style={{ fontSize: "10px", color: " #9d9d9d", }}>M.R.P:  <span style={{ textDecorationLine: "line-through" }}>₹4,500</span></span> <span style={{ fontSize: "12px" }}>(62% off)</span><br />
+                                            <span style={{ fontSize: "12px", color: "rgb(123 121 121)", }}>Save 1% with coupon</span></p>
                                         <div className='d-flex justify-content-between align-items-baseline'>
-                                            <a href="#" class="buy-btn">Buy Now</a>
+                                            <p className='mb-0' style={{ fontSize: "10px" }}>900+ bought in past month</p>
                                             <div className='reviews'>
                                                 <i class="bi bi-star-fill me-1"></i>
                                                 <span>
@@ -932,38 +940,38 @@ export default function Home() {
             <section className='container department-section'>
                 <div className='d-flex justify-content-between align-items-center'>
                     <h2 class="container discover-text semiBold my-5">Shop by Department</h2>
-                    <Link style={{textDecoration:"none", width:"150px",}}><i class="bi bi-box-arrow-up-right me-2"></i> See All</Link>
+                    <Link style={{ textDecoration: "none", width: "150px", }}><i class="bi bi-box-arrow-up-right me-2"></i> See All</Link>
                 </div>
                 <div className='container row'>
                     <div className='col-md-3'>
-                        <Link style={{textDecoration:"none", textAlign:"center"}}>
+                        <Link style={{ textDecoration: "none", textAlign: "center" }}>
                             <img className='img-fluid rounded' src='/images/fx-10.jpg' />
-                            <h3  style={{fontSize: "19px", lineHeight: "2rem", color: "#0f172a", marginTop:"20px"}}>Beauty Products</h3>
-                            <p style={{fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155"}}>78+ Products</p>
+                            <h3 style={{ fontSize: "19px", lineHeight: "2rem", color: "#0f172a", marginTop: "20px" }}>Beauty Products</h3>
+                            <p style={{ fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155" }}>78+ Products</p>
                         </Link>
 
                     </div>
                     <div className='col-md-3'>
-                        <Link style={{textDecoration:"none", textAlign:"center"}}>
+                        <Link style={{ textDecoration: "none", textAlign: "center" }}>
                             <img className='img-fluid rounded' src='/images/fx-10.jpg' />
-                            <h3  style={{fontSize: "19px", lineHeight: "2rem", color: "#0f172a", marginTop:"20px"}}>Beauty Products</h3>
-                            <p style={{fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155"}}>78+ Products</p>
+                            <h3 style={{ fontSize: "19px", lineHeight: "2rem", color: "#0f172a", marginTop: "20px" }}>Beauty Products</h3>
+                            <p style={{ fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155" }}>78+ Products</p>
                         </Link>
 
                     </div>
                     <div className='col-md-3'>
-                        <Link style={{textDecoration:"none", textAlign:"center"}}>
+                        <Link style={{ textDecoration: "none", textAlign: "center" }}>
                             <img className='img-fluid rounded' src='/images/fx-10.jpg' />
-                            <h3  style={{fontSize: "19px", lineHeight: "2rem", color: "#0f172a", marginTop:"20px"}}>Beauty Products</h3>
-                            <p style={{fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155"}}>78+ Products</p>
+                            <h3 style={{ fontSize: "19px", lineHeight: "2rem", color: "#0f172a", marginTop: "20px" }}>Beauty Products</h3>
+                            <p style={{ fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155" }}>78+ Products</p>
                         </Link>
 
                     </div>
                     <div className='col-md-3'>
-                        <Link style={{textDecoration:"none", textAlign:"center"}}>
+                        <Link style={{ textDecoration: "none", textAlign: "center" }}>
                             <img className='img-fluid rounded' src='/images/fx-10.jpg' />
-                            <h3  style={{fontSize: "19px", lineHeight: "2rem", color: "#0f172a", marginTop:"20px"}}>Beauty Products</h3>
-                            <p style={{fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155"}}>78+ Products</p>
+                            <h3 style={{ fontSize: "19px", lineHeight: "2rem", color: "#0f172a", marginTop: "20px" }}>Beauty Products</h3>
+                            <p style={{ fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155" }}>78+ Products</p>
                         </Link>
 
                     </div>
@@ -975,28 +983,28 @@ export default function Home() {
             <section className='container order-note'>
                 <div className='container row text-center'>
                     <div className='col-md-3'>
-                        <img src='/images/search.svg' width={160}/> <br />
-                        <div class="badge rounded my-3" style={{color:"#991b1b", backgroundColor:"#fee2e2"}}>Setp 1</div>   
-                        <p style={{fontSize: "16px", lineHeight: "1rem", color: "#0f172a", marginTop:"20px", fontWeight:600}}>Filter & Discover</p>
-                        <p style={{fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155", padding:"0px 35px",}}>Smart filtring and suggestions make it esay to find</p>
+                        <img src='/images/search.svg' width={160} /> <br />
+                        <div class="badge rounded my-3" style={{ color: "#991b1b", backgroundColor: "#fee2e2" }}>Setp 1</div>
+                        <p style={{ fontSize: "16px", lineHeight: "1rem", color: "#0f172a", marginTop: "20px", fontWeight: 600 }}>Filter & Discover</p>
+                        <p style={{ fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155", padding: "0px 35px", }}>Smart filtring and suggestions make it esay to find</p>
                     </div>
                     <div className='col-md-3'>
-                        <img src='/images/cart.svg' width={160} height={152}/> <br />
-                        <div class="badge rounded my-3" style={{color:"#3730a3", backgroundColor:"#e0e7ff"}}>Setp 2</div>   
-                        <p style={{fontSize: "16px", lineHeight: "1rem", color: "#0f172a", marginTop:"20px", fontWeight:600}}>Add to bag</p>
-                        <p style={{fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155", padding:"0px 35px",}}>Easily select the correct items and add them to the cart</p>
+                        <img src='/images/cart.svg' width={160} height={152} /> <br />
+                        <div class="badge rounded my-3" style={{ color: "#3730a3", backgroundColor: "#e0e7ff" }}>Setp 2</div>
+                        <p style={{ fontSize: "16px", lineHeight: "1rem", color: "#0f172a", marginTop: "20px", fontWeight: 600 }}>Add to bag</p>
+                        <p style={{ fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155", padding: "0px 35px", }}>Easily select the correct items and add them to the cart</p>
                     </div>
                     <div className='col-md-3'>
-                        <img src='/images/shipping.svg' width={160} height={152}/> <br />
-                        <div class="badge rounded my-3" style={{color:"#854d0e", backgroundColor:"#fef9c3"}}>Setp 3</div>   
-                        <p style={{fontSize: "16px", lineHeight: "1rem", color: "#0f172a", marginTop:"20px", fontWeight:600}}>Fast shipping</p>
-                        <p style={{fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155", padding:"0px 35px",}}>The carrier will confirm and ship quickly to you</p>
+                        <img src='/images/shipping.svg' width={160} height={152} /> <br />
+                        <div class="badge rounded my-3" style={{ color: "#854d0e", backgroundColor: "#fef9c3" }}>Setp 3</div>
+                        <p style={{ fontSize: "16px", lineHeight: "1rem", color: "#0f172a", marginTop: "20px", fontWeight: 600 }}>Fast shipping</p>
+                        <p style={{ fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155", padding: "0px 35px", }}>The carrier will confirm and ship quickly to you</p>
                     </div>
                     <div className='col-md-3'>
-                        <img src='/images/review.svg' width={160} height={152}/> <br />
-                        <div class="badge rounded my-3" style={{color:"#6b21a8", backgroundColor:"#f3e8ff"}}>Setp 4</div>   
-                        <p style={{fontSize: "16px", lineHeight: "1rem", color: "#0f172a", marginTop:"20px", fontWeight:600}}>Enjoy the product</p>
-                        <p style={{fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155", padding:"0px 35px",}}>Have fun and enjoy your 5-star quality products</p>
+                        <img src='/images/review.svg' width={160} height={152} /> <br />
+                        <div class="badge rounded my-3" style={{ color: "#6b21a8", backgroundColor: "#f3e8ff" }}>Setp 4</div>
+                        <p style={{ fontSize: "16px", lineHeight: "1rem", color: "#0f172a", marginTop: "20px", fontWeight: 600 }}>Enjoy the product</p>
+                        <p style={{ fontSize: ".875rem", lineHeight: "1.25rem", color: "#334155", padding: "0px 35px", }}>Have fun and enjoy your 5-star quality products</p>
                     </div>
                 </div>
             </section>

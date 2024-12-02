@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './Layout.js';
 import Home from "./component/home.js"
-import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -18,19 +18,23 @@ import Login from "./component/Login.js";
 import Myorder from './component/MyOrder/MyOrder.js'
 import MyAccount from './component/MyAccount/MyAccount.js';
 import Product from './component/product/Product.js';
+import Checkout from './component/MyOrder/Checkout.js';
+import Wishlist from './component/product/Wishlist.js';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-      {path: "/", element: <Home/>},
-      {path: "about", element: <About/>},
-      {path: "contact", element: <Contact/>},
-      {path: "accessories", element: <Accessories/>},
-      {path: "shoppingcart", element: <ShoppingCart/>},
-      {path: "myorder", element: <Myorder/>},
-      { path: "my-account", element: <MyAccount /> },
-      {path:"product" , element:<Product/>}
+      { path: "/", element: <Home /> },
+      { path: "about", element: <About /> },
+      { path: "contact", element: <Contact /> },
+      { path: "accessories", element: <Accessories /> },
+      { path: "shoppingcart", element: <ShoppingCart /> },
+      { path: "myorder", element: <Myorder /> },
+      { path: "myaccount", element: <MyAccount /> },
+      { path: "product", element: <Product /> },
+      { path: "checkout", element: <Checkout /> },
+      { path: "wishlist", element: <Wishlist /> },
     ]
   },
   { path: "login", element: <Login /> }

@@ -3,7 +3,9 @@ import { Link, NavLink } from 'react-router-dom'
 import Contact from '../Contact';
 import './Header.css';
 import Login from '../Login';
-
+import MyOrder from '../MyOrder/MyOrder';
+import Checkout from '../MyOrder/Checkout';
+import Wishlist from '../product/Wishlist';
 export default function Header() {
 
     const [activeButton, setActiveButton] = useState(null);
@@ -42,7 +44,7 @@ export default function Header() {
                     </div>
                 </div>
             </section>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light header-section">
                 <div className="container navbar-container">
                     <a className="navbar-brand" href="#">Navbar</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,7 +81,11 @@ export default function Header() {
                             <ul className='my-0'>
                                 <li>
                                     <div class="dropdown me-1">
-                                        <Link className='' id="dropdownMenuOffset" data-bs-toggle="dropdown" style={{ paddingBottom: "7px", }}><i class="bi bi-cart me-2" style={{ fontSize: "20px" }}></i></Link>
+                                        <Link className='position-relative' id="dropdownMenuOffset" data-bs-toggle="dropdown" style={{ paddingBottom: "7px", }}><i class="bi bi-cart me-2" style={{ fontSize: "20px" }}>
+                                            <span class="position-absolute top-0 start-80 translate-middle badge rounded-pill bg-dark" style={{ fontSize: "8px" }}>
+                                                9
+                                                <span class="visually-hidden">unread messages</span>
+                                            </span></i></Link>
                                         <div>
 
                                         </div>
@@ -87,7 +93,7 @@ export default function Header() {
                                             <div className='cart-heading px-3 pt-2'>
                                                 <h3>My Cart</h3>
                                             </div>
-                                            <li class="dropdown-item product-list" style={{ maxHeight: "58vh", overflowY: "auto" }}>
+                                            <li class="dropdown-item product-list" style={{ maxHeight: "52vh", overflowY: "auto" }}>
 
                                                 <div className='cart-products mt-4'>
                                                     <div className='row'>
@@ -169,10 +175,17 @@ export default function Header() {
                                                 <p style={{ marginBottom: "0px", fontWeight: "600" }}>Subtotal <span className='float-end'>$299.00</span></p>
                                                 <span style={{ fontSize: '12px', color: "#6e7d92" }}>Shipping and taxes calculated at checkout.</span>
                                             </li>
-                                            <li class="dropdown-item"></li>
+                                            <li class="dropdown-item border-top pt-3">
+                                                <Link className='view-cartBtn float-start' to={"/myorder"}>View Cart</Link>
+                                                <Link className='checkoutBtn float-end' to={"/checkout"}>Checkout</Link>
+                                            </li>
                                         </ul>
                                     </div>
-                                    <Link style={{ marginTop: "1px" }}><i class="bi bi-heart" style={{ fontSize: "20px" }}></i></Link>
+                                    <Link to={"wishlist"} style={{ marginTop: "1px" }}><i class="bi bi-heart" style={{ fontSize: "20px" }}>
+                                        <span class="position-absolute top-30 start-80 translate-middle badge rounded-pill bg-dark" style={{ fontSize: "8px", top: "17%" }}>
+                                            9
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span></i></Link>
 
                                 </li>
                             </ul>
@@ -184,7 +197,7 @@ export default function Header() {
             <div class="offcanvas offcanvas-start all-categories" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Digital Content and Devices</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style={{fontSize:"12px"}}></button>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style={{ fontSize: "12px" }}></button>
                 </div>
                 <div class="offcanvas-body pt-0">
                     <div class="accordion accordion-flush" id="accordionFlushExample">

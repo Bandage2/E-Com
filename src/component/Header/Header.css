@@ -195,6 +195,18 @@ button:focus:not(:focus-visible) {
     padding: 1px .975rem;
     border-radius: 10px;
 }
+.header-section .view-cartBtn{
+    border: 1px solid #ccc;
+    padding: 6px 22px;
+    border-radius: 7px;
+}
+.header-section .checkoutBtn{
+    border: 1px solid #ccc;
+    padding: 6px 22px;
+    border-radius: 7px;
+    color: #fff;
+    background: #111a56;
+}
 
 @media (max-width: 1200px) {
     .navbar-container .header-icons .dropdown-menu[data-bs-popper] {

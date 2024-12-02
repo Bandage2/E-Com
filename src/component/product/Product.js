@@ -1,408 +1,258 @@
-import React, { useState } from "react";
-import "./Product.css";
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import ReviewCard from "./ReviewCard";
+import RatingSummary from "./RatingSummary";
 
 export default function Product() {
-  const [mainImage, setMainImage] = useState("");
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const handleImageClick = (e) => {
-    const clickedClassName = e.target.dataset.src;
-    setMainImage(clickedClassName);
+  const [activeButton, setActiveButton] = useState(null);
+  const handleButtonClick = () => {
+    setActiveButton(!activeButton);
   };
+
+  const details = [
+    { label: "Material composition", value: "COTTON LYCRA" },
+    { label: "Pattern", value: "Solid" },
+    { label: "Fit type", value: "Oversized Fit" },
+    { label: "Sleeve type", value: "Half Sleeve" },
+    { label: "Collar style", value: "Polo Collar" },
+    { label: "Length", value: "Standard Length" },
+    { label: "Country of Origin", value: "India" },
+  ];
 
   return (
     <>
-      <div class="main">
-        <ul class="bar d-flex gap-4 ms-5 mt-3 fs-6 ">
-          <li>Women</li>
-          <li>Men</li>
-          <li>Kids</li>
-          <li>Sports</li>
-          <li>Brands</li>
-          <li style={{ color: "red" }}>Shoes</li>
-        </ul>
-        <hr />
-        <ul class="bar d-flex gap-4 ms-5 mt-3 " style={{ color: "grey" }}>
-          <li>Clothes and Shoes</li>
-          <li>
-            <i class="bi bi-caret-right-fill me-3"></i>Shoes
-          </li>
-          <li>
-            <i class="bi bi-caret-right-fill me-3"></i>Reebok
-          </li>
-        </ul>
+      <section className="container-md productView-section my-3">
+        <div className="row mb-4">
+          <div className="col-md-5" style={{ paddingLeft: "2rem" }}>
+            {/* Main Swiper */}
+            <Swiper
+              style={{
+                '--swiper-navigation-color': 'transparent',
+                '--swiper-pagination-color': 'transparent',
+              }}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper2"
+              breakpoints={{
+                320: { slidesPerView: 1, spaceBetween: 5 },
+                768: { slidesPerView: 1, spaceBetween: 10 },
+                1024: { slidesPerView: 1, spaceBetween: 15 },
+              }}
+            >
+              <SwiperSlide>
+                <img className='img-fluid' src="./images/1.png" width={200} alt="Product 1" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className='img-fluid' src="./images/2.png" width={200} alt="Product 2" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img className='img-fluid' src="./images/3.png" width={200} alt="Product 3" />
+              </SwiperSlide>
+            </Swiper>
 
-        <div class="row ">
-          <div class="col-lg-6 col-12 p-5 ">
-            <img
-              src="./images/product-img-removebg-preview.png"
-              class="big-img  w-100 rounded"
-              style={{ backgroundColor: "#f2f0ea" }}
-              id="main-img"
-              alt="..."
-            />
+            {/* Thumbnail Swiper */}
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              spaceBetween={10}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper"
+              breakpoints={{
+                320: { slidesPerView: 1, spaceBetween: 5 },
+                768: { slidesPerView: 3, spaceBetween: 10 },
+                1024: { slidesPerView: 3, spaceBetween: 15 },
+              }}
+            >
+              <div className='row'>
+                <div className='col-md-4'>
+                  <SwiperSlide>
+                    <img className='img-fluid' src="./images/1.png" width={100} alt="Thumbnail 1" />
+                  </SwiperSlide>
 
-            <div class="row row-img pt-3 ">
-              <div class=" col-lg-3 col-md-4 col-6">
-                <img
-                  src="./images/shoe-img1-removebg-preview.png"
-                  class="imgg rounded"
-                  style={{ backgroundColor: "#f2f0ea" }}
-                  onClick={handleImageClick}
-                  alt="..."
-                  data-src="./images/shoe-img1.png"
-                />
+                </div>
+                <div className='col-md-4'>
+                  <SwiperSlide>
+                    <img className='img-fluid' src="./images/2.png" width={100} alt="Thumbnail 2" />
+                  </SwiperSlide>
+
+                </div>
+                <div className='col-md-4'>
+                  <SwiperSlide>
+                    <img className='img-fluid' src="./images/3.png" width={100} alt="Thumbnail 3" />
+                  </SwiperSlide>
+                </div>
               </div>
-              <div class=" col-lg-3 col-md-4 col-6">
-                <img
-                  src="./images/shoe-img1-removebg-preview.png"
-                  class="imgg rounded"
-                  style={{ backgroundColor: "#f2f0ea" }}
-                  onClick={handleImageClick}
-                  alt="..."
-                  data-src="./images/shoe-img1.png"
-                />
-              </div>
-              <div class=" col-lg-3 col-md-4 col-6 pt-2 pt-lg-0">
-                <img
-                  src="./images/shoe-img2-removebg-preview.png"
-                  class="imgg rounded"
-                  style={{ backgroundColor: "#f2f0ea" }}
-                  onClick={handleImageClick}
-                  alt="..."
-                  data-src="./images/shoe-img2.jpeg"
-                />
-              </div>
-              <div class=" col-lg-3 col-md-4 col-6 pt-2 pt-lg-0">
-                <img
-                  src="./images/shoe-img3-removebg-preview.png"
-                  class="imgg rounded"
-                  style={{ backgroundColor: "#f2f0ea" }}
-                  onClick={handleImageClick}
-                  alt="..."
-                  data-src="./images/shoe-img3.jpg"
-                />
-              </div>
-            </div>
+            </Swiper>
           </div>
-
-          <div class="col-lg-6 col-12 p-5 ">
-            Reebok
-            <h5 class="card-text" style={{ color: "darkgray" }}>
-              Shoes Reebok zig kinetics
-            </h5>
-            <h2 class="card-text"> 1496/-</h2>
-            <div class=" d-flex">
-              <i
-                class="bi bi-star-fill"
-                style={{ color: "rgb(249, 205, 60)" }}
-              ></i>
-              <i
-                class="bi bi-star-fill"
-                style={{ color: "rgb(249, 205, 60)" }}
-              ></i>
-              <i
-                class="bi bi-star-fill"
-                style={{ color: "rgb(249, 205, 60)" }}
-              ></i>
-              <i
-                class="bi bi-star-fill"
-                style={{ color: "rgb(249, 205, 60)" }}
-              ></i>
-              <i
-                class="bi bi-star-fill"
-                style={{ color: "rgb(249, 205, 60)" }}
-              ></i>
-              <p class="ms-3 " style={{ color: "darkgray" }}>
-                42 reviews
+          <div className='col-md-7'>
+            <div className='product-detailing mt-5 ms-5'>
+              <p className='mb-0' style={{ fontSize: '12px', color: "teal" }}>Brand: Leriya Fashion</p>
+              <p style={{ width: "73%" }}>
+                Leriya Fashion Men Casual Half Sleeve Polo Oversized Fit T-Shirt
               </p>
-            </div>
-            <div>
-              Size<i class="bi bi-caret-right-fill"></i>
-              <p style={{ color: "darkgray" }}>EU Men</p>
-              <ul class=" d-flex bar">
-                <li class=" ps-1 mt-2">
-                  <button type="button" class="btn btn-light">
-                    40
-                  </button>
-                </li>
-                <li class="  ps-1 mt-2">
-                  <button type="button" class="btn btn-light">
-                    38
-                  </button>
-                </li>
-                <li class=" ps-1 mt-2">
-                  <button type="button" class="btn btn-light">
-                    36
-                  </button>
-                </li>
-                <li class="  ps-1 mt-2">
-                  <button type="button" class="btn btn-light">
-                    34
-                  </button>
-                </li>
-                <li class=" ps-1 mt-2">
-                  <button type="button" class="btn btn-light ">
-                    32
-                  </button>
-                </li>
-                <li class="  ps-1 mt-2">
-                  <button type="button" class="btn btn-light">
-                    30
-                  </button>
-                </li>
-                <li class="  ps-1 mt-2">
-                  <button type="button" class="btn btn-light">
-                    28
-                  </button>
-                </li>
-                <li class="  ps-1 mt-2">
-                  <button type="button" class="btn btn-light">
-                    26
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h6 class="mt-3">
-                colours<i class="bi bi-caret-right-fill ms-2"></i>
-              </h6>
-              <ul class=" d-flex bar gap-2">
-                <li class="mt-1">
-                <img
-                    src="./images/product-img-removebg-preview.png"
-                    class="car rounded"
-                    style={{ backgroundColor: "#f2f0ea" }}
-                    alt="..."
-                  />
-                </li>
-                <li class=" mt-1">
-                <img
-                    src="./images/shoe-img2-removebg-preview.png"
-                    class="car rounded"
-                    style={{ backgroundColor: "#f2f0ea" }}
-                    alt="..."
-                  />
-                </li>
-                <li class="mt-1">
-                <img
-                    src="./images/shoe-img3-removebg-preview.png"
-                    class="car rounded"
-                    style={{ backgroundColor: "#f2f0ea" }}
-                    alt="..."
-                  />
-                </li>
-
-              </ul>
-
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <button type="button" class="bttn btn-light p-2 mt-4">
-                  <i class="bi bi-bag mx-1"></i>Add to cart
-                </button>
+              <div className='product-review'>
+                <ul className='d-flex gap-2 align-items-baseline'>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-half"></i></li>
+                  <li>42 review</li>
+                </ul>
               </div>
-              <div class="col-6">
-                <button type="button" class="heart btn btn-light mt-4">
-                  <i class="bi bi-heart"></i>
+              <p className='product-rate mb-0'>
+                ₹2300<span style={{ fontSize: "10px", color: " #9d9d9d", }}>M.R.P:  <span style={{ textDecorationLine: "line-through" }}>₹4,500</span></span> <span style={{ fontSize: "12px" }}>(62% off)</span><br />
+              </p>
+              <span style={{ fontSize: "12px", color: "rgb(123 121 121)", }}>Save 1% with coupon</span>
+              <div className='cart-productSize mt-3'>
+                <p className='mb-0'>
+                  Size <span className='ms-1' style={{ fontSize: "10px", color: "#ccc" }}>UK Size</span>
+                </p>
+                <ul className='d-flex gap-2 align-items-baseline mt-2'>
+                  <li><a>XS</a></li>
+                  <li><a>M</a></li>
+                  <li><a>L</a></li>
+                  <li><a>XL</a></li>
+                  <li><a>XXL</a></li>
+                  <li><a>2XL</a></li>
+                </ul>
+              </div>
+              <p className='mb-0' style={{ fontSize: "12px", fontWeight: "600" }}><i class="bi bi-truck"></i> Free Delivery on order above ₹1000</p>
+              <div className='addtocartBtn'>
+                <button className="addtocart"><i class="bi bi-cart-check"></i> Add To Cart</button>
+                <button className='wishlistBtn ms-2' onClick={() => handleButtonClick()}>
+
+                  {activeButton ? (
+                    <span className="check-icon">
+                      <i className="bi bi-check-lg"></i>
+                    </span>
+                  ) : (
+                    <span className="heart-icon">
+                      <i className="bi bi-heart"></i>
+                    </span>
+                  )}
                 </button>
               </div>
             </div>
-            <div class="ms-auto pt-5" style={{ color: "darkgray" }}>
-              <i class="bi bi-truck me-2"></i>Free delivery on oreders over
-              500rs
-            </div>
-          </div>
-        </div>
 
-        <div class="part2 ps-3 pb-3 ">
-          <div class="col-lg-6 pe-4">
-            <div class="d-flex gap-5 mt-4 fs-5" style={{ color: "darkgray" }}>
-              <p>Details</p>
-              <p class="text-dark">Reviews</p>
-              <p>Discussion</p>
-            </div>
-            <div class="new">
-              <p class="ms-3 pt-1">
-                Newest<i class="bi bi-caret-down-fill ms-2 me-2 "></i>
-              </p>
-            </div>
-          </div>
-          <div class="review-sec1">
-            <div class="row">
-              <div class="col-lg-6 col-12">
-                <div class="d-flex">
-                  <div class="d-flex">
-                    <i class="bi bi-person-circle me-2 fs-1"></i>
-                    <p class="pt-3 ms-2">
-                      Ritesh Kumar
-                      <div class=" d-flex gap-1 pt-2">
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                      </div>
-                      Excellent running shoes , very nice and comfortable .
-                      <p style={{ color: "rgb(244, 158, 92)" }}>
-                        Reply
-                        <i class="fa-regular fa-thumbs-up text-dark ms-4">32</i>
-                        <i class="fa-regular fa-thumbs-down text-dark ms-3">
-                          2
-                        </i>
-                      </p>
-                    </p>
-                  </div>
-                  <div class="pt-3 ms-auto" style={{ color: "darkgray" }}>
-                    Yesterday
-                  </div>
-                </div>
-                <hr />
-                <div class="d-flex">
-                  <div class="d-flex">
-                    <i class="bi bi-person-circle me-2 fs-1"></i>
-                    <p class="pt-3 ms-2">
-                      Rani Sharma
-                      <div class=" d-flex gap-1 pt-2">
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                        <i
-                          class="bi bi-star-fill"
-                          style={{ color: "rgb(249, 205, 60)" }}
-                        ></i>
-                      </div>
-                      Good Shoes .
-                      <p style={{ color: "rgb(244, 158, 92)" }}>
-                        Reply
-                        <i class="fa-regular fa-thumbs-up text-dark ms-4">21</i>
-                        <i class="fa-regular fa-thumbs-down text-dark ms-3">
-                          0
-                        </i>
-                      </p>
-                    </p>
-                  </div>
-                  <div class="pt-3 ms-auto" style={{ color: "darkgray" }}>
-                    Yesterday
-                  </div>
-                </div>
-              </div>
-              <div class="review-sec2 col-lg-6 col-12 ">
-                <div class="ms-auto">
-                  <h4 class="ps-5">Reviews</h4>
-                  <div class=" d-flex gap-1 pt-2 ps-5">
-                    <i
-                      class="bi bi-star-fill"
-                      style={{ color: "rgb(249, 205, 60)" }}
-                    ></i>
-                    <i
-                      class="bi bi-star-fill"
-                      style={{ color: "rgb(249, 205, 60)" }}
-                    ></i>
-                    <i
-                      class="bi bi-star-fill"
-                      style={{ color: "rgb(249, 205, 60)" }}
-                    ></i>
-                    <i
-                      class="bi bi-star-fill"
-                      style={{ color: "rgb(249, 205, 60)" }}
-                    ></i>
-                    <i
-                      class="bi bi-star-fill"
-                      style={{ color: "rgb(249, 205, 60)" }}
-                    ></i>
-                    <span class="ms-5">4.8</span>
-                  </div>
-                  <div class="row pe-3 ps-5">
-                    <div class="side">
-                      <div>5 star</div>
-                    </div>
-                    <div class="middle">
-                      <div class="bar-container rounded">
-                        <div class="bar-5 rounded"></div>
-                      </div>
-                    </div>
-                    <div class="side right">
-                      <div>150</div>
-                    </div>
-                    <div class="side">
-                      <div>4 star</div>
-                    </div>
-                    <div class="middle">
-                      <div class="bar-container rounded">
-                        <div class="bar-4 rounded"></div>
-                      </div>
-                    </div>
-                    <div class="side right">
-                      <div>63</div>
-                    </div>
-                    <div class="side">
-                      <div>3 star</div>
-                    </div>
-                    <div class="middle">
-                      <div class="bar-container rounded">
-                        <div class="bar-3 rounded"></div>
-                      </div>
-                    </div>
-                    <div class="side right">
-                      <div>15</div>
-                    </div>
-                    <div class="side">
-                      <div>2 star</div>
-                    </div>
-                    <div class="middle">
-                      <div class="bar-container rounded">
-                        <div class="bar-2 rounded"></div>
-                      </div>
-                    </div>
-                    <div class="side right">
-                      <div>6</div>
-                    </div>
-                    <div class="side">
-                      <div>1 star</div>
-                    </div>
-                    <div class="middle">
-                      <div class="bar-container rounded">
-                        <div class="bar-1 rounded"></div>
-                      </div>
-                    </div>
-                    <div class="side right">
-                      <div>20</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
-      </div>
+        <div className='row'>
+          <div className='col-md-12'>
+            <div className='usercomment-section'>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="true">Details</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Review</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+                  <div className='row'>
+                    <div className='col-md-12'>
+                      <h2 className='mt-3 ps-3' style={{ fontSize: "16px" }}>
+                        Product details
+                      </h2>
+                    </div>
+                    <div className='col-md-5 col-sm-12'>
+                      <div className='product-details-list ps-3'>
+                        <table className="table table-borderless">
+                          <tbody>
+                            {details.map((detail, index) => (
+                              <tr key={index}>
+                                <th style={{ textAlign: "left", width: "50%" }}>{detail.label}</th>
+                                <td style={{ textAlign: "left", fontWeight: "500" }}>{detail.value}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                  <div className='row'>
+                    <div className='col-md-12 mb-3'>
+                      <div className='review-filter my-3 ms-3'>
+                        <div class="dropdown">
+                          <button class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style={{ border: "1px solid #ccc", padding: "4px 20px" }}>
+                            Top Review
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Top Review</a></li>
+                            <li><a class="dropdown-item" href="#">Most Review</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='col-md-8'>
+                      <div className='users-comment'>
+                        <ReviewCard
+                          user="Helen M."
+                          date="Yesterday"
+                          rating={5}
+                          review="It has good drape and fall . As light in colour it goes well with formal pants and is a pleasure to wear"
+                          likes={42}
+                          dislikes={0}
+                        />
+                        <ReviewCard
+                          user="Ann D."
+                          date="2 days ago"
+                          rating={4}
+                          review="Good tshirt"
+                          likes={35}
+                          dislikes={2}
+                          reply={{
+                            user: "Andrew G.",
+                            date: "2 days ago",
+                            message: "Is it Comfortable for wear?",
+                          }}
+                        />
+                      </div>
+
+
+
+
+                    </div>
+                    <div className='col-md-4'>
+                      {/* Right Section */}
+                      <RatingSummary
+                        ratings={[
+                          { stars: 5, count: 48 },
+                          { stars: 4, count: 28 },
+                          { stars: 3, count: 25 },
+                          { stars: 2, count: 12 },
+                          { stars: 1, count: 4 },
+                        ]}
+                      />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
     </>
   );
 }
