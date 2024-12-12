@@ -61,7 +61,7 @@ export default function Header() {
                                 <Link to='/' className="nav-link active" aria-current="page">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to='/about' className="nav-link" href="#">Electronics</Link>
+                                <Link to='/electronics' className="nav-link" href="#">Electronics</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/accessories' className="nav-link" href="#">Accessories</Link>

@@ -11,6 +11,12 @@ import 'animate.css';
 import { Navigation, Pagination, EffectFade, A11y, Autoplay, EffectCards } from 'swiper/modules';
 export default function Home() {
     const [currentSlide, setCurrentSlide] = useState(0);
+
+    const [activeButton, setActiveButton] = useState();
+
+    const handleWishlist = () => {
+        setActiveButton(!activeButton);
+    };
     return (
         <>
             <Swiper
@@ -257,11 +263,26 @@ export default function Home() {
                             <div className='fx-product'>
                                 <div class="card border-0">
                                     <div className='img-bg'>
+                                        <button
+                                            className={`wishlistbtn btn position-absolute top-0 end-0 mt-2 me-2 ${activeButton ? 'active' : ''}`}
+                                            onClick={handleWishlist}
+                                        >
+                                            {activeButton ? (
+                                                <span className="heart-fill">
+                                                    <i class="bi bi-heart-fill"></i>
+                                                </span>
+                                            ) : (
+                                                <span className="heart-icon">
+                                                    <i className="bi bi-heart"></i>
+                                                </span>
+                                            )}
+                                            
+                                        </button>
                                         <img src="/images/fx-2.png" class="card-img-top" alt="..." />
                                         <div className='product-size btns'>
                                             <ul className='d-flex flex-direction-row justify-content-between'>
                                                 <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                                <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -294,6 +315,7 @@ export default function Home() {
                             <div className='fx-product'>
                                 <div class="card border-0">
                                     <div className='img-bg'>
+                                        <span class="badge new-items-badge position-absolute m-3">New</span>
                                         <img src="/images/fx-1.png" class="card-img-top" alt="..." />
                                         <div className='product-size'>
                                             <ul className='d-flex flex-direction-row justify-content-between'>
@@ -335,11 +357,12 @@ export default function Home() {
                             <div className='fx-product'>
                                 <div class="card border-0">
                                     <div className='img-bg'>
+                                        <span class="badge sold-out position-absolute m-3">Sold Out</span>
                                         <img src="/images/fx-2.png" class="card-img-top" alt="..." />
                                         <div className='product-size btns'>
                                             <ul className='d-flex flex-direction-row justify-content-between'>
                                                 <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                                <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -651,7 +674,7 @@ export default function Home() {
                                                     <div className='product-size btns'>
                                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -728,7 +751,7 @@ export default function Home() {
                                                     <div className='product-size btns'>
                                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -805,7 +828,7 @@ export default function Home() {
                                                     <div className='product-size btns'>
                                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -882,7 +905,7 @@ export default function Home() {
                                                     <div className='product-size btns'>
                                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                                         </ul>
                                                     </div>
                                                 </div>

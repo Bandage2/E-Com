@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Wishlist() {
     return (
@@ -63,6 +64,7 @@ export default function Wishlist() {
                                     </li>
                                 </ul>
                             </div>
+                            <button type="button" class="btn btn-outline-dark  movecartBtn"><i class="bi bi-plus"></i> Add items</button>
                             <button type="button" class="btn btn-outline-dark  movecartBtn"><i class="bi bi-cart-check"></i> Move all to Bag</button>
                         </div>
 
@@ -74,12 +76,12 @@ export default function Wishlist() {
                         <div className='fx-product'>
                             <div class="card border-0">
                                 <div className='img-bg'>
-                                <span class="badge bg-danger position-absolute m-3 right-0">Danger</span>
+                                <span class="badge sold-out position-absolute m-3">Sold Out</span>
                                     <img src="/images/fx-2.png" class="card-img-top" alt="..." />
                                     <div className='product-size btns'>
                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -116,7 +118,7 @@ export default function Wishlist() {
                                     <div className='product-size btns'>
                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -153,7 +155,7 @@ export default function Wishlist() {
                                     <div className='product-size btns'>
                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -190,7 +192,7 @@ export default function Wishlist() {
                                     <div className='product-size btns'>
                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                         </ul>
                                     </div>
                                 </div>

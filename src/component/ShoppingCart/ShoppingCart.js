@@ -375,7 +375,7 @@ function ShoppingCart() {
                                     <div className='product-size btns'>
                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -449,7 +449,7 @@ function ShoppingCart() {
                                     <div className='product-size btns'>
                                         <ul className='d-flex flex-direction-row justify-content-between'>
                                             <li><a className='btn cart-btn'><i class="bi bi-cart me-1"></i> Add To Bag</a></li>
-                                            <li><a className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</a></li>
+                                            <li><Link to={"/product"} className='btn view-btn'><i class="bi bi-arrows-fullscreen me-1"></i> Quick View</Link></li>
                                         </ul>
                                     </div>
                                 </div>
