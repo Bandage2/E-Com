@@ -6,7 +6,7 @@ export default function Register() {
     const handleLogin = (e) => {
         e.preventDefault();
         localStorage.setItem("auth", "true");
-        navigate("/"); // Redirect to home or a protected page
+        navigate("/"); 
     };
     return (
         <div className="login-container">
