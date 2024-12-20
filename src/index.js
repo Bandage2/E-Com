@@ -22,6 +22,12 @@ import Wishlist from './component/product/Wishlist.js';
 import Electronics from './component/Electronices/Electronics.js';
 import About from './component/about.js';
 import Register from './component/Register.js';
+import PrivacyPolicy from './component/Terms_Policy/PrivacyPolicy.js';
+import TermsConditions from './component/Terms_Policy/TermsConditions.js';
+import RefundPolicy from './component/Terms_Policy/RefundPolicy.js';
+import CookiesPolicy from './component/Terms_Policy/CookiesPolicy.js';
+import ShippingPolicy from './component/Terms_Policy/ShippingPolicy.js';
+import ScrollToTop from './component/ScrollToTop.js';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +44,11 @@ const router = createBrowserRouter([
       { path: "checkout", element: <Checkout /> },
       { path: "wishlist", element: <Wishlist /> },
       { path: "about", element: <About /> },
+      { path: "privacypolicy", element: <PrivacyPolicy /> },
+      { path: "termsandconditions", element: <TermsConditions /> },
+      { path: "refundpolicy", element: <RefundPolicy /> },
+      { path: "cookiespolicy", element: <CookiesPolicy /> },
+      { path: "shippingpolicy", element: <ShippingPolicy /> },
     ]
   },
   { path: "login", element: <Login /> },

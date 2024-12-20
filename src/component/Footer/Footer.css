@@ -3,8 +3,11 @@ ul {
     padding: 0px;
 }
 .footer-section {
-  background: #151414;
+  background: #ffffff;
   position: relative;
+  border-top: 1px solid #ccc;
+  margin-top: 43px;
+
 }
 .footer-cta {
   border-bottom: 1px solid #373636;
@@ -20,7 +23,7 @@ ul {
   display: inline-block;
 }
 .cta-text h4 {
-  color: #fff;
+  color: #000000;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 2px;
@@ -54,7 +57,7 @@ ul {
   line-height: 28px;
 }
 .footer-social-icon span {
-  color: #fff;
+  color: #000000;
   display: block;
   font-size: 20px;
   font-weight: 700;
@@ -83,7 +86,7 @@ ul {
   background: #DD4B39;
 }
 .footer-widget-heading h3 {
-  color: #fff;
+  color: #000000;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 40px;
@@ -95,7 +98,7 @@ ul {
   left: 0;
   bottom: -15px;
   height: 2px;
-  width: 50px;
+  width:142px;
   background: #ff5e14;
 }
 .footer-widget ul li {
@@ -157,4 +160,9 @@ ul {
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
+}
+@media(max-width:575px){
+  .footer-widget{
+    margin-top: 3rem!important;
+  }
 }

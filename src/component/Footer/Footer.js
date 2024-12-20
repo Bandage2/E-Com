@@ -10,11 +10,14 @@ export default function Footer() {
                     <div className="footer-cta pt-5 pb-5">
                         <div className="row">
                             <div className="col-xl-4 col-md-4 mb-30">
-                                <div className="single-cta">
+                                <div className="single-cta d-flex">
                                     <i className="fas fa-map-marker-alt"></i>
                                     <div className="cta-text">
                                         <h4>Find us</h4>
-                                        <span>1010, Jagatpura Phase-1 New Delhi</span>
+                                        <span>213, 2nd floor
+                                            Pushp enclave, Tonk Road
+                                            Pratap Nagar, Jaipur
+                                            Rajasthan-302033</span>
                                     </div>
                                 </div>
                             </div>
@@ -23,7 +26,7 @@ export default function Footer() {
                                     <i className="fas fa-phone"></i>
                                     <div className="cta-text">
                                         <h4>Call us</h4>
-                                        <span>1234567890</span>
+                                        <span>+91 9660339514</span>
                                     </div>
                                 </div>
                             </div>
@@ -32,7 +35,7 @@ export default function Footer() {
                                     <i className="far fa-envelope-open"></i>
                                     <div className="cta-text">
                                         <h4>Mail us</h4>
-                                        <span>mail@info.com</span>
+                                        <span>info@FinUnique.in</span>
                                     </div>
                                 </div>
                             </div>
@@ -40,16 +43,15 @@ export default function Footer() {
                     </div>
                     <div className="footer-content pt-5 pb-5">
                         <div className="row">
-                            <div className="col-xl-6 col-lg-4 mb-50">
+                            <div className="col-xl-5 col-lg-4 mb-50">
                                 <div className="footer-widget">
                                     <div className="footer-logo">
-                                        <a href="javascript:void(0)"><img src="https://i.ibb.co/QDy827D/ak-logo.png" className="img-fluid" alt="logo" /></a>
+                                        <a href="javascript:void(0)"><img src="./images/Digihub.png" className="img-fluid" alt="logo" /></a>
                                     </div>
-                                    <div className="footer-text">
-                                        <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                            elit,Lorem ipsum dolor sit amet.</p>
+                                    <div className="footer-text ms-4">
+                                        <p>We are selling electronics, gadgets, or accessories, our platform is optimized for both performance and design, ensuring your products stand out.</p>
                                     </div>
-                                    <div className="footer-social-icon">
+                                    <div className="footer-social-icon ps-md-4">
                                         <span>Follow us</span>
                                         <a href="#"><i className="fab fa-facebook-f facebook-bg"></i></a>
                                         <a href="#"><i className="fab fa-twitter twitter-bg"></i></a>
@@ -57,19 +59,22 @@ export default function Footer() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-6 col-lg-4 col-md-6 mb-30">
+                            <div className="col-xl-7 col-lg-4 col-md-6 mb-30 ps-md-5 mt-sm-5 mt-xs-5">
                                 <div className="footer-widget">
                                     <div className="footer-widget-heading">
                                         <h3>Useful Links</h3>
                                     </div>
                                     <ul>
                                         <li><Link to={"/"}>Home</Link></li>
-                                        <li><Link>Terms and conditions</Link></li>
-                                        <li><Link>About us</Link></li>
-                                        <li><Link>Our Services</Link></li>
-                                        <li><Link>Cancelation Policy</Link></li>
-                                        <li><Link>Contact us</Link></li>
-                                        <li><Link>Privacy Policy</Link></li>
+                                        <li><Link to='/myaccount'>My Account</Link></li>
+                                        <li><Link to='/wishlist'>Wishlist</Link></li>
+                                        <li><Link to='/refundpolicy'>Refund Policy</Link></li>
+
+                                        <li><Link to='/contact'>Contact us</Link></li>
+                                        <li><Link to='/termsandconditions'>Terms and conditions</Link></li>
+
+                                        <li><Link to='/privacypolicy'>Privacy Policy</Link></li>
+                                        <li><Link to='/shippingpolicy'>Shipping Policy</Link></li>
                                     </ul>
                                 </div>
                             </div>

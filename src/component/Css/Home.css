@@ -1243,3 +1243,30 @@ button.wishlistbtn.active .bi-heart-fill{
   .login-section{
     width: 50%;
   }
+  /* //................. Privacy Policy and Terms ............// */
+  .privacypolicy_section{
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+  }
+  .privacypolicy_section .text-color{
+    background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+
+  }
+  .bi-hand-index-thumb::before{
+    rotate: 91deg;
+  }
+  .responsiveImg img{
+    width: 300px;
+    margin-left: 91px;
+  }
+  @media (max-width: 768px) {
+    .responsiveImg img{
+        width: 100% !important;
+    margin-left: 0px !important;
+
+    }
+  }
