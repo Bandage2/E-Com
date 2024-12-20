@@ -16,10 +16,10 @@ export default function Contact() {
                                 <h1>Contact Us</h1>
                                 <span>As you might expect of a company that began as a high-end interiors contractor, we pay strict
                                     attention.</span>
-                                <h3>USA</h3>
-                                <p>195 E Parker Square Dr, Parker, CO 801<br />+43 982-314-0958</p>
-                                <h3>India</h3>
-                                <p>HW95+C9C, Lorem ipsum dolor sit.<br />411014</p>
+                                <h3>Find us</h3>
+                                <p>213, 2nd floor Pushp enclave, Tonk Road Pratap Nagar, Jaipur Rajasthan-302033<br />+91 9660339514</p>
+                                <h3>Mail</h3>
+                                <p>info@FinUnique.in</p>
                             </div>
                             <div className="form-details">
                                 <input type="text" name="name" id="name" placeholder="Name" required />
