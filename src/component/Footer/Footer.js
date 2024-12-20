@@ -51,12 +51,6 @@ export default function Footer() {
                                     <div className="footer-text ms-4">
                                         <p>We are selling electronics, gadgets, or accessories, our platform is optimized for both performance and design, ensuring your products stand out.</p>
                                     </div>
-                                    <div className="footer-social-icon ps-md-4">
-                                        <span>Follow us</span>
-                                        <a href="#"><i className="fab fa-facebook-f facebook-bg"></i></a>
-                                        <a href="#"><i className="fab fa-twitter twitter-bg"></i></a>
-                                        <a href="#"><i className="fab fa-google-plus-g google-bg"></i></a>
-                                    </div>
                                 </div>
                             </div>
                             <div className="col-xl-7 col-lg-4 col-md-6 mb-30 ps-md-5 mt-sm-5 mt-xs-5">
@@ -75,6 +69,7 @@ export default function Footer() {
 
                                         <li><Link to='/privacypolicy'>Privacy Policy</Link></li>
                                         <li><Link to='/shippingpolicy'>Shipping Policy</Link></li>
+                                        <li><Link to='/cookiespolicy'>Cookies</Link></li>
                                     </ul>
                                 </div>
                             </div>

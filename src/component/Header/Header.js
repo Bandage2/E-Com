@@ -27,8 +27,8 @@ export default function Header() {
                         <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="search products..." />
                     </div>
                     <div className="sing_in_up ">
-                        <Link to="">SIGN IN</Link>
-                        <Link href="# ">SIGN UP</Link>
+                        <Link to="/login">SIGN IN</Link>
+                        <Link to='/register'>SIGN UP</Link>
                         {/* <button
                             className={activeButton === "button1" ? "active" : ""}
                             onClick={() => handleButtonClick("button1")}
@@ -46,7 +46,9 @@ export default function Header() {
             </section>
             <nav className="navbar navbar-expand-lg navbar-light bg-light header-section">
                 <div className="container navbar-container">
-                    <a className="navbar-brand" href="#">Navbar</a>
+                    <Link to='/' className="navbar-brand" href="#">
+                        <img src='/images/Digihub.png' className='img-fluid'  height={48} width={61}/>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

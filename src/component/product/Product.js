@@ -7,6 +7,7 @@ import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import ReviewCard from "./ReviewCard";
 import RatingSummary from "./RatingSummary";
+import { Link } from 'react-router-dom';
 
 export default function Product() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -129,8 +130,8 @@ export default function Product() {
                 </ul>
               </div>
               <p className='mb-0' style={{ fontSize: "12px", fontWeight: "600" }}><i class="bi bi-truck"></i> Free Delivery on order above ₹1000</p>
-              <div className='addtocartBtn'>
-                <button className="addtocart"><i class="bi bi-cart-check"></i> Add To Cart</button>
+              <div className='addtocartBtn mt-5'>
+                <Link to='/myorder' className="addtocart" style={{ textDecoration: "none", marginTop:"16px" }}><i class="bi bi-cart-check"></i> Add To Cart</Link>
                 <button className='wishlistBtn ms-2' onClick={() => handleButtonClick()}>
 
                   {activeButton ? (

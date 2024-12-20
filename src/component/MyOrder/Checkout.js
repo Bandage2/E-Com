@@ -213,7 +213,7 @@ export default function Checkout() {
                                                 <label className="form-check-label" htmlFor="freeShipping">
                                                     Free shipping <p className="text-muted mb-0">(7–30 business days)</p>
                                                 </label>
-                                                <span className="float-end">-$0</span>
+                                                <span className="float-end">-₹0</span>
 
                                             </div>
                                         </div>
@@ -233,7 +233,7 @@ export default function Checkout() {
                                                 <label className="form-check-label" htmlFor="regularShipping">
                                                     Regular shipping <p className="text-muted mb-0">(3–14 business days)</p>
                                                 </label>
-                                                <span className="float-end">-$7.5</span>
+                                                <span className="float-end">-₹7.5</span>
                                             </div>
                                         </div>
                                     </div>
@@ -252,7 +252,7 @@ export default function Checkout() {
                                                 <label className="form-check-label" htmlFor="expressShipping">
                                                     Express shipping <p className="text-muted mb-0">(1–3 business days)</p>
                                                 </label>
-                                                <span className="float-end">-$22.50</span>
+                                                <span className="float-end">-₹22.50</span>
                                             </div>
                                         </div>
 
@@ -295,7 +295,7 @@ export default function Checkout() {
                                     <h5 className="card-title">Your Order</h5>
                                     <div className="d-flex justify-content-between">
                                         <span>Cahier Leather Bag</span>
-                                        <span>$2,500.00</span>
+                                        <span>₹2,500.00</span>
                                     </div>
                                     <hr />
                                     <div className="mb-3">
@@ -314,27 +314,27 @@ export default function Checkout() {
                                     </div>
                                     <div className="d-flex justify-content-between">
                                         <span>Subtotal</span>
-                                        <span>$2,500.00</span>
+                                        <span>₹2,500.00</span>
                                     </div>
                                     <div className="d-flex justify-content-between">
                                         <span>Discount</span>
-                                        <span>-$0</span>
+                                        <span>-₹0</span>
                                     </div>
                                     <div className="d-flex justify-content-between">
                                         <span>Shipment cost</span>
                                         <span>
                                             {shippingMethod === "express"
-                                                ? "$22.50"
+                                                ? "₹22.50"
                                                 : shippingMethod === "regular"
-                                                    ? "$7.50"
-                                                    : "$0"}
+                                                    ? "₹7.50"
+                                                    : "₹0"}
                                         </span>
                                     </div>
                                     <hr />
                                     <div className="d-flex justify-content-between fw-bold">
                                         <span>Grand total</span>
                                         <span>
-                                            $
+                                            ₹
                                             {shippingMethod === "express"
                                                 ? "2,522.50"
                                                 : shippingMethod === "regular"
