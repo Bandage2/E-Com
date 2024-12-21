@@ -3,6 +3,9 @@ body{
     font-family: "Poppins", Poppins !important;
     overflow-x: hidden;
 }
+a{
+    text-decoration: none !important;
+}
 .home_page img {
     height: auto;
     width: 100%;
@@ -1251,11 +1254,12 @@ button.wishlistbtn.active .bi-heart-fill{
   }
   .privacypolicy_section .text-color{
     background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
-
-  }
+}
   .bi-hand-index-thumb::before{
     rotate: 91deg;
   }

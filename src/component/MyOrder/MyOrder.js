@@ -176,7 +176,7 @@ function MyOrder() {
                                                 <i class="bi bi-trash3"></i>   Remove
                                             </button>
                                         </td>
-                                        <td className="text-end" style={{ fontSize: '14px' }}>${(item.price * item.quantity).toFixed(2)}</td>
+                                        <td className="text-end" style={{ fontSize: '14px' }}>₹{(item.price * item.quantity).toFixed(2)}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -193,18 +193,18 @@ function MyOrder() {
                                     <thead className="table-light">
                                         <tr>
                                             <th>Subtotal</th>
-                                            <td className="text-end">${subtotal.toFixed(2)}</td>
+                                            <td className="text-end">₹{subtotal.toFixed(2)}</td>
                                         </tr>
                                         <tr>
                                             <th>Discount</th>
-                                            <td className="text-end">$0</td>
+                                            <td className="text-end">₹0</td>
                                         </tr>
 
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <td>Grand Total</td>
-                                            <td className="text-end">${subtotal.toFixed(2)}</td>
+                                            <td className="text-end">₹{subtotal.toFixed(2)}</td>
                                         </tr>
                                         <tr>
                                             <td colSpan={2} className="border-bottom-0 pb-0">

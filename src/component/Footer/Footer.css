@@ -103,9 +103,9 @@ ul {
 }
 .footer-widget ul li {
   display: inline-block;
-  float: left;
   width: 50%;
   margin-bottom: 12px;
+  vertical-align: top;
 }
 .footer-widget ul li a:hover{
   color: #ff5e14;

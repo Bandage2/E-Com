@@ -14,10 +14,7 @@ export default function Footer() {
                                     <i className="fas fa-map-marker-alt"></i>
                                     <div className="cta-text">
                                         <h4>Find us</h4>
-                                        <span>213, 2nd floor
-                                            Pushp enclave, Tonk Road
-                                            Pratap Nagar, Jaipur
-                                            Rajasthan-302033</span>
+                                        <span>PLOT NO 97, DAKSHINPURI-I, SHRIKISHANPURA, SANGANER, Jagatpura, Jaipur, Jaipur- 302017, Rajasthan</span>
                                     </div>
                                 </div>
                             </div>
